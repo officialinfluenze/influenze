@@ -1,9 +1,11 @@
 import './App.css';
 import Header from './header';
+
 function App() {
   return (
     <div>
-        <Header />
+      <Header />
+      <img src="logo.png" />
     </div>
   );
 }
