@@ -4,44 +4,67 @@ import { NavLinks } from './index.styles';
 
 const Header = () => {
   return (
-    <AppBar position="static" style={{ backgroundColor: '#f8e1e1' }}>
+    <AppBar
+      position="static"
+      style={{ backgroundColor: '#f8e1e1', boxShadow: 'none' }}
+    >
       <Toolbar>
         <img
           src={Logo}
           alt="Logo"
           style={{ width: 50, height: 50, marginRight: 10 }}
         />
-        <Text variant="h5" sx={{ color: '#000', fontWeight: '550' }}>
+        <Text
+          variant="h6"
+          color="rgb(10 10 10 / 87%)"
+          style={{ fontFamily: 'Arial, sans-serif' }}
+          sx={{ fontWeight: '550' }}
+        >
           Influenze
         </Text>
         <NavLinks>
           <Button
-            color="inherit"
-            sx={{ textTransform: 'none', color: '#000', fontWeight: 550 }}
+            sx={{
+              textTransform: 'none',
+              color: 'rgb(10 10 10 / 87%)',
+              fontWeight: 550,
+            }}
           >
             Home
           </Button>
           <Button
-            color="inherit"
-            sx={{ textTransform: 'none', color: '#000', fontWeight: 550 }}
+            sx={{
+              textTransform: 'none',
+              color: 'rgb(10 10 10 / 87%)',
+              fontWeight: 550,
+            }}
           >
             About
           </Button>
           <Button
-            color="inherit"
-            sx={{ textTransform: 'none', color: '#000', fontWeight: 550 }}
+            sx={{
+              textTransform: 'none',
+              color: 'rgb(10 10 10 / 87%)',
+              fontWeight: 550,
+            }}
           >
             Services
           </Button>
           <Button
-            color="inherit"
-            sx={{ textTransform: 'none', color: '#000', fontWeight: 550 }}
+            sx={{
+              textTransform: 'none',
+              color: 'rgb(10 10 10 / 87%)',
+              fontWeight: 550,
+            }}
           >
             Blog
           </Button>
           <Button
-            color="inherit"
-            sx={{ textTransform: 'none', color: '#000', fontWeight: 550 }}
+            sx={{
+              textTransform: 'none',
+              color: 'rgb(10 10 10 / 87%)',
+              fontWeight: 550,
+            }}
           >
             Contact
           </Button>
