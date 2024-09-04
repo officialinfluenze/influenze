@@ -1,0 +1,44 @@
+.txt {
+    text-align: center;
+    font-weight: bold;
+    color: gray;
+    font-size: larger;
+}
+.txt-2 {
+    text-align: center;
+    font-weight: bold;
+    font-size:x-large;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    margin: 30px 0 30px 160px;
+    width: 80%;
+}
+
+.icon{
+    border:1px solid gray;
+    border-radius: 5px;
+    padding: 3px;
+
+}
+
+.sub-div1 {
+    align-items: center;
+    text-align: center;
+    flex: 1 1 30%; 
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.description{
+    font-weight:500;
+    font-size: medium;
+    font-family: sans-serif;
+}
