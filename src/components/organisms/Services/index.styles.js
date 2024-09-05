@@ -6,19 +6,25 @@ export const FlexRow = styled('div')({
     gap:'10px',
     justifyContent:'center',
     alignItems:'center',
-    // margin: '30px 0 30px 160px',
     width: '80%'
 });
 
-export const ImageContainer = styled('div')({
-    display:'flex',
-    border:'1px solid gray',
+export const ImageContainer = styled('div')(({ theme }) => ({
+    display: 'flex',
+    border: '1px solid gray',
     borderRadius: '8px',
-    padding:' 5px',
-    width:'30px',
-    justifyContent:'center',
-    margin:'0px 160px 0px 160px'
-});
+    padding: '5px',
+    width: '30px',
+    justifyContent: 'center',
+    alignItems:'center',
+  
+    [theme.breakpoints.down('md')]: {
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        margin: '0',
+    },
+  }));
 
 export const ServicesContainer = styled('div')({
     alignItems: 'center',
@@ -26,6 +32,7 @@ export const ServicesContainer = styled('div')({
     flex:' 1 1 30%', 
     boxSizing: 'border-box',
     padding:'10px',
+    minHeight:'160px'
 });
 
 export const ServiceTitle = styled(Text)({

@@ -5,9 +5,11 @@ const {BoltIcon} = Icons;
 
 const Services = ({ icon, title, description }) => (
     <ServicesContainer>
-        <ImageContainer>
-            {icon}
-        </ImageContainer>
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+            <ImageContainer>
+                {icon}
+            </ImageContainer>
+        </div>
         <ServiceTitle>{title}</ServiceTitle>
         <Text variant='body2'>{description}</Text>
     </ServicesContainer>
