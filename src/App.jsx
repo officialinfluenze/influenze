@@ -1,6 +1,6 @@
 import './App.css';
-import Page from './Services';
-import Plans from './Plans';
+import Page from './components/organisms/Services';
+import Plans from './components/organisms/Plans';
 function App() {
   return (
     <div>

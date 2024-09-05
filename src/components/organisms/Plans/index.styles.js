@@ -2,7 +2,8 @@ import {styled,Text} from '@influenze/ui-lib';
 
 export const Heading1 = styled(Text)({
     fontWeight:'bold',
-    textAlign:'center'
+    textAlign:'center',
+    marginTop:'30px'
 });
 
 export const Heading2 = styled(Text)({

@@ -1,5 +1,5 @@
 import { Text,Icons } from '@influenze/ui-lib';
-import videoSrc from '../assets/videos/video.mp4'
+import videoSrc from '../../../assets/videos/video.mp4'
 import { FlexRow, ImageContainer, ServicesContainer, ServiceTitle,Heading1,Heading2 } from './index.styles';
 const {BoltIcon} = Icons;
 
@@ -26,15 +26,21 @@ const Page = () => {
         <>
             <Heading1  variant='body1'>Boost Your Brand</Heading1>
             <Heading2 variant='h5'>Innovative Social Media Marketing Solutions</Heading2>
-                <video controls style={{ minWidth:"70%",marginLeft:"120px" }}>
-                    <source src={videoSrc} type="video/mp4" />
-                </video>
-            <FlexRow>
-                {services.map((service, index) => (
-                    <Services key={index} {...service} />
-                ))}
-            </FlexRow>
+            <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <video controls>
+                        <source src={videoSrc} type="video/mp4" />
+                    </video>
+            </div>
+            <div style={{display:'flex',justifyContent:'center',alignItems:'center',marginTop:'30px'}}>
+                <FlexRow>
+                    {services.map((service, index) => (
+                        <Services key={index} {...service} />
+                    ))}
+                </FlexRow>
+            </div> 
+            
         </>
+        
     );
 }
 

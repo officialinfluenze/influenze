@@ -4,7 +4,9 @@ export const FlexRow = styled('div')({
     display: 'flex',
     flexWrap: 'wrap',
     gap:'10px',
-    margin: '30px 0 30px 160px',
+    justifyContent:'center',
+    alignItems:'center',
+    // margin: '30px 0 30px 160px',
     width: '80%'
 });
 
@@ -39,7 +41,8 @@ export const ServiceDescription = styled(Text)({
 export const Heading1 = styled(Text)({
     fontWeight:'bold',
     textAlign:'center',
-    color:'gray'
+    color:'gray',
+    marginTop:'20px'
 });
 
 export const Heading2 = styled(Text)({

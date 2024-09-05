@@ -1,6 +1,6 @@
 import DoneIcon from '@mui/icons-material/Done';
 import { Heading1, Heading2, FlexContainer} from './index.styles';
-import TierPlanCard from 'src/components/organisms/TierPlanCard';
+import TierPlanCard from 'src/components/molecules/TierPlanCard';
 
 const Tier1 = [
     { icon: <DoneIcon sx={{ fontSize: '20px' }} />, description: "1 User" },
