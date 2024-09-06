@@ -5,7 +5,7 @@ import { NavLinks } from './index.styles';
 const Header = () => {
   return (
     <AppBar
-      position="static"
+      position="fixed"
       style={{ backgroundColor: '#f8e1e1', boxShadow: 'none' }}
     >
       <Toolbar>
