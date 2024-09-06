@@ -4,9 +4,14 @@ import HomeScreen from './containers/home/screen';
 
 function App() {
   return (
-    <div>
+    <>
       <HomeScreen />
-    </div>
+      <div>
+        <Page />
+        <Plans />
+        <Testimonials />
+      </div>
+    </>
   );
 }
 
