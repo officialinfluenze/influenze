@@ -44,5 +44,5 @@
       "@influenze/ui-lib": ["libraries/ui-lib/src/index"]
     }
   },
-  "include": ["src/**/*", "libraries/ui-lib/src/index.tsx"]
+  "include": ["src/**/*", "libraries/ui-lib/src/index.tsx", "libraries/ui-lib/src/icons/BoltIcon.jsx", "libraries/ui-lib/src/icons/Tick.jsx"]
 }

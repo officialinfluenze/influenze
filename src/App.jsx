@@ -1,10 +1,18 @@
 import './App.css';
-import Header from './components/organisms/Navbar';
-
+import Page from './components/organisms/Services';
+import Plans from './components/organisms/Plans';
+import Testimonials from './components/organisms/Testimonials';
 function App() {
   return (
     <div>
-      <Header />
+      <header>
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+      </header>
+      <Page/>
+      <Plans/>
+      <Testimonials/>
     </div>
   );
 }
