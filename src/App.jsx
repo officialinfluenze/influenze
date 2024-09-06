@@ -6,11 +6,6 @@ function App() {
   return (
     <>
       <HomeScreen />
-      <div>
-        <Page />
-        <Plans />
-        <Testimonials />
-      </div>
     </>
   );
 }
