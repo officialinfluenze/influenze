@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { Text } from '@influenze/ui-lib';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import {
   MainContainer,
   SubContainer,
@@ -16,20 +17,10 @@ import Image_3 from '../../../assets/images/3-png.png';
 import Image_4 from '../../../assets/images/4-png.png';
 import Image_5 from '../../../assets/images/5-png.png';
 import Image_6 from '../../../assets/images/6-png.png';
-import Astronaut from '../../../assets/images/astronaut.png';
-
-const imageVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const textVariants = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
-};
+import headerimg from '../../../assets/images/headerimg.png';
 
 const FirstContainer = () => {
-  const mainImage = Astronaut;
+  const mainImage = headerimg;
   const imagesSrc = [
     Image_1,
     Image_2,
@@ -45,38 +36,63 @@ const FirstContainer = () => {
     Image_6,
   ];
 
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollOpacity = 1 - scrollY / 500;
+      const scrollTranslateY = scrollY / 20;
+      controls.start({
+        opacity: Math.max(scrollOpacity, 0),
+        y: scrollTranslateY,
+        transition: { duration: 0.5, ease: 'easeOut' },
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls]);
+
   const renderTopPart = () => {
     return (
-      <SubTopContainer>
-        <ImageContainer
-          as={motion.div}
-          variants={imageVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, ease: 'easeOut' }}
-        >
-          <StyledMainImage src={mainImage} alt="Logo" />
-        </ImageContainer>
+      <motion.div animate={controls}>
+        <SubTopContainer>
+          <ImageContainer
+            as={motion.div}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            // whileHover={{ scale: 1.05 }}
+          >
+            <StyledMainImage src={mainImage} alt="Logo" />
+          </ImageContainer>
 
-        <SubTopTextContainer
-          as={motion.div}
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, ease: 'easeOut' }}
-        >
-          <Text variant="h4" style={{ fontWeight: 550 }}>
-            Maximize Your Social Media Impact
-          </Text>
-          <Text color={'textSecondary'} style={{ fontWeight: 550 }}>
-            Elevate Social Media is your go-to agency for cutting-edge social
-            media marketing solutions. We help businesses grow and thrive online
-            with minimal effort. Elevate Social Media is your go-to agency for
-            cutting-edge social media marketing solutions. We help businesses
-            grow and thrive online with minimal effort.
-          </Text>
-        </SubTopTextContainer>
-      </SubTopContainer>
+          <SubTopTextContainer
+            as={motion.div}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          >
+            <Text variant="h4" style={{ fontWeight: 550, color: 'white' }}>
+              Maximize Your Social Media Impact
+            </Text>
+            <Text
+              color={'textSecondary'}
+              style={{ fontWeight: 550, color: 'white' }}
+            >
+              Elevate Social Media is your go-to agency for cutting-edge social
+              media marketing solutions. We help businesses grow and thrive
+              online with minimal effort. Elevate Social Media is your go-to
+              agency for cutting-edge social media marketing solutions. We help
+              businesses grow and thrive online with minimal effort.
+            </Text>
+          </SubTopTextContainer>
+        </SubTopContainer>
+      </motion.div>
     );
   };
 

@@ -1,49 +1,130 @@
-import { Text,Icons } from '@influenze/ui-lib';
-import videoSrc from '../../../assets/videos/video.mp4'
-import { FlexRow, ImageContainer, ServicesContainer, ServiceTitle,Heading1,Heading2 } from './index.styles';
-const {BoltIcon} = Icons;
+import {
+  FlexRow,
+  ImageContainer,
+  ServicesContainer,
+  ServiceTitle,
+  Heading1,
+  Heading2,
+} from './index.styles';
+import digitalstratergies from '../../../assets/images/Digital Strategies.svg';
+import contentcreation from '../../../assets/images/Content Creation.svg';
+import webdevelopment from '../../../assets/images/Web Development.svg';
+import analytics from '../../../assets/images/Analytics & SEO.svg';
+import branding from '../../../assets/images/Branding and Marketing.svg';
+import payperclick from '../../../assets/images/Pay-Per-Click.svg';
+import { ServiceDescription } from './index.styles';
 
 const Services = ({ icon, title, description }) => (
-    <ServicesContainer>
-        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-            <ImageContainer>
-                {icon}
-            </ImageContainer>
-        </div>
-        <ServiceTitle>{title}</ServiceTitle>
-        <Text variant='body2'>{description}</Text>
-    </ServicesContainer>
+  <ServicesContainer>
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
+      <ImageContainer>{icon}</ImageContainer>
+    </div>
+    <ServiceTitle>{title}</ServiceTitle>
+    <ServiceDescription>{description}</ServiceDescription>
+  </ServicesContainer>
 );
 
 const services = [
-    { icon: <BoltIcon/>, title: "Custom plans", description: "Tailored strategies designed carefully to meet your unique business needs." },
-    { icon: <BoltIcon/>, title: "Premium Quality", description: "We deliver top-notch quality services to elevate your brand." },
-    { icon: <BoltIcon/>, title: "Growth Focused", description: "Our strategies are focused on driving growth and success." },
-    { icon: <BoltIcon/>, title: "Innovative Solutions", description: "We provide cutting-edge solutions tailored to your needs." },
-    { icon: <BoltIcon/>, title: "Affordable Pricing", description: "Get the best value with our competitively priced packages." },
-    { icon: <BoltIcon/>, title: "Personalized Support", description: "Experience dedicated support tailored to your requirements." }
+  {
+    icon: (
+      <img
+        src={digitalstratergies}
+        alt="Digital Strategies"
+        style={{ width: '50px', height: '50px' }}
+      />
+    ),
+    title: 'Digital Strategies',
+    description:
+      'Unique and Strategic plans to drive digital growth effectively.',
+  },
+  {
+    icon: (
+      <img
+        src={contentcreation}
+        alt="Content Creation"
+        style={{ width: '50px', height: '50px' }}
+      />
+    ),
+    title: 'Content Creation',
+    description:
+      'Craft impactful, engaging and audience-focused digital content.',
+  },
+  {
+    icon: (
+      <img
+        src={webdevelopment}
+        alt="webdevelopment"
+        style={{ width: '50px', height: '50px' }}
+      />
+    ),
+    title: 'Web Development',
+    description:
+      'Create responsive, dynamic, and engaging websites for all devices.',
+  },
+  {
+    icon: (
+      <img
+        src={analytics}
+        alt="Analytics & SEO"
+        style={{ width: '50px', height: '50px' }}
+      />
+    ),
+    title: 'Analytics & SEO',
+    description:
+      'Boost online visibility with expert SEO and data-driven insights.',
+  },
+  {
+    icon: (
+      <img
+        src={branding}
+        alt="Branding and Marketing "
+        style={{ width: '50px', height: '50px' }}
+      />
+    ),
+    title: 'Branding and Marketing',
+    description:
+      'Build, enhance, advice and promote a unique brand identity for your business.',
+  },
+  {
+    icon: (
+      <img
+        src={payperclick}
+        alt="Pay-Per-Click"
+        style={{ width: '50px', height: '50px' }}
+      />
+    ),
+    title: 'Pay-Per-Click',
+    description:
+      'Drive quality traffic with targeted ads on major platforms for maximizing reach.',
+  },
 ];
 const Page = () => {
-    return (
-        <>
-            <Heading1  variant='body1'>Boost Your Brand</Heading1>
-            <Heading2 variant='h5'>Innovative Social Media Marketing Solutions</Heading2>
-            <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-                <video controls>
-                        <source src={videoSrc} type="video/mp4" />
-                    </video>
-            </div>
-            <div style={{display:'flex',justifyContent:'center',alignItems:'center',marginTop:'30px'}}>
-                <FlexRow>
-                    {services.map((service, index) => (
-                        <Services key={index} {...service} />
-                    ))}
-                </FlexRow>
-            </div> 
-            
-        </>
-        
-    );
-}
+  return (
+    <>
+      <Heading1 variant="body1">Boost Your Brand</Heading1>
+      <Heading2 variant="h5">
+        Innovative Social Media Marketing Solutions
+      </Heading2>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '30px',
+        }}
+      >
+        <FlexRow>
+          {services.map((service, index) => (
+            <Services key={index} {...service} />
+          ))}
+        </FlexRow>
+      </div>
+    </>
+  );
+};
 
 export default Page;

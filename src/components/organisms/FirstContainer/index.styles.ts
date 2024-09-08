@@ -2,6 +2,9 @@ import { styled } from '@influenze/ui-lib';
 import { APP_BAR_HEIGHT } from 'src/containers/home/constants';
 
 export const MainContainer = styled('div')({
+  backgroundImage: `
+radial-gradient(at 51% 70%, hsla(233,54%,40%,0.64) 0px, transparent 50%),
+radial-gradient(at 29% 32%, hsla(233,54%,40%,0.64) 0px, transparent 50%);`,
   paddingTop: `${APP_BAR_HEIGHT}px`,
 });
 
@@ -12,7 +15,6 @@ export const SubContainer = styled('div')({
   width: '100%',
   gap: '70px',
   paddingTop: '10px',
-  backgroundColor: '#f8e1e1',
   justifyContent: 'space-between',
 });
 
@@ -33,7 +35,6 @@ export const ImageContainer = styled('div')({
   width: '80%',
   '@media (max-width: 750px)': {
     width: '100%',
-
     height: 'auto',
   },
 });
@@ -45,7 +46,7 @@ export const SubTopTextContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  width: '20%',
+  width: '30%',
   gap: '50px',
   alignSelf: 'flex-start',
   padding: '10px 20px 0px 0px',
