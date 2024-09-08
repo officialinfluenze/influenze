@@ -1,42 +1,43 @@
 import { useRef, useEffect } from 'react';
-import DoneIcon from '@mui/icons-material/Done';
+import { Icons } from '@influenze/ui-lib';
 import { Heading1, Heading2, FlexContainer } from './index.styles';
 import TierPlanCard from 'src/components/molecules/TierPlanCard';
+ const CheckCircleOutlineIcon = Icons.CheckCircleOutlineIcon;
 
 const Tier1 = [
-  { icon: <DoneIcon sx={{ fontSize: '20px' }} />, description: '1 User' },
+  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '1 User' },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Email Support',
   },
-  { icon: <DoneIcon sx={{ fontSize: '20px' }} />, description: '5 Projects' },
+  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '5 Projects' },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Basic Analytics',
   },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Limited Access',
   },
 ];
 
 const Tier2 = [
-  { icon: <DoneIcon sx={{ fontSize: '20px' }} />, description: '5 Users' },
+  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '5 Users' },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Priority Support',
   },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Unlimited Projects',
   },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Advanced Analytics',
   },
-  { icon: <DoneIcon sx={{ fontSize: '20px' }} />, description: 'Full Access' },
+  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: 'Full Access' },
   {
-    icon: <DoneIcon sx={{ fontSize: '20px' }} />,
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Custom Reports',
   },
 ];
@@ -71,9 +72,7 @@ const Plans = () => {
   return (
     <>
       <Heading1 variant="h5">Affordable Plans</Heading1>
-      <Heading2 variant="body1">
-        Choose the perfect plan for your business needs.
-      </Heading2>
+      <Heading2 variant="body1">Choose the perfect plan for your business needs.</Heading2>
       <FlexContainer ref={tierCardRef} className="plans-container">
         <TierPlanCard
           planTitle="Basic Plan"
@@ -82,7 +81,7 @@ const Plans = () => {
           description="Ideal for personal use"
           benefits={Tier1}
           buttonText="Start Now"
-          buttonVariant="outlined"
+          buttonVariant="contained"
         />
         <TierPlanCard
           planTitle="Pro Plan"

@@ -2,6 +2,7 @@ import './App.css';
 import Page from './components/organisms/Services';
 import Plans from './components/organisms/Plans';
 import Testimonials from './components/organisms/Testimonials';
+import CommonQuestions from './components/organisms/FAQ';
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
       <Page/>
       <Plans/>
       <Testimonials/>
+      <CommonQuestions/>
     </div>
   );
 }

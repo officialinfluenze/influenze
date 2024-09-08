@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Text, CardActions, CardContent } from '@influenze/ui-lib';
+import { Text, CardContent } from '@influenze/ui-lib';
 import {
   StyledCard,
   PlanTitleContainer,
@@ -10,6 +10,7 @@ import {
   StyledHr,
   PlanTitle,
   StyledButton,
+  CardActions
 } from './index.styles';
 
 const PlanBenefits = ({ icon, description }) => (

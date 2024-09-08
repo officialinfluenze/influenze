@@ -9,6 +9,7 @@ export const Heading1 = styled(Text)({
 export const Heading2 = styled(Text)({
     textAlign: 'center',
     color: 'gray',
+    marginTop:'20px',
     marginBottom: '25px',
     fontWeight: 'bold',
 });
