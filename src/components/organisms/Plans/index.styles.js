@@ -1,20 +1,33 @@
 import { styled, Text } from '@influenze/ui-lib';
 
 export const Heading1 = styled(Text)({
-    fontWeight: 'bold',
+    fontFamily: 'sans-serif',
+    fontStyle: 'normal',
+    fontSize: '54px',
+    color:'#dddddd',
     textAlign: 'center',
-    marginTop:'30px'
+    marginTop: '200px',
+    fontWeight: 'bold', 
+    letterSpacing: '-1.5px',
+    lineHeight: '110%'
 });
 
 export const Heading2 = styled(Text)({
+    fontFamily: 'sans-serif',
+    fontSize: '54px', 
+    fontStyle: 'normal',
     textAlign: 'center',
-    color: 'gray',
+    color:'#dddddd',
     marginTop:'20px',
     marginBottom: '25px',
     fontWeight: 'bold',
+    letterSpacing: '-1.5px', 
+    maxWidth:'80%',
+    margin:'auto',
 });
 
 export const FlexContainer = styled('div')({
+    marginTop: '100px',
     display: 'flex',
     gap: '20px',
     justifyContent: 'center',

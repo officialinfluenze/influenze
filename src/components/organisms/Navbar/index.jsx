@@ -1,12 +1,16 @@
 import { AppBar, Toolbar, Button, Text } from '@influenze/ui-lib';
-import Logo from '../../../assets/images/logo-transparent-svg.svg';
+import Logo from '../../../assets/images/logo-png.png';
 import { NavLinks } from './index.styles';
 
 const Header = () => {
   return (
     <AppBar
-      position="static"
-      style={{ backgroundColor: '#f8e1e1', boxShadow: 'none' }}
+      position="fixed"
+      style={{
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        backdropFilter: 'blur(12px)',
+      }}
     >
       <Toolbar>
         <img
@@ -18,7 +22,7 @@ const Header = () => {
           variant="h6"
           color="rgb(10 10 10 / 87%)"
           style={{ fontFamily: 'Arial, sans-serif' }}
-          sx={{ fontWeight: '550' }}
+          sx={{ fontWeight: '550', color: 'white' }}
         >
           Influenze
         </Text>
@@ -28,6 +32,7 @@ const Header = () => {
               textTransform: 'none',
               color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
+              color: 'white',
             }}
           >
             Home
@@ -37,6 +42,7 @@ const Header = () => {
               textTransform: 'none',
               color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
+              color: 'white',
             }}
           >
             About
@@ -46,6 +52,7 @@ const Header = () => {
               textTransform: 'none',
               color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
+              color: 'white',
             }}
           >
             Services
@@ -55,6 +62,7 @@ const Header = () => {
               textTransform: 'none',
               color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
+              color: 'white',
             }}
           >
             Blog
@@ -64,6 +72,7 @@ const Header = () => {
               textTransform: 'none',
               color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
+              color: 'white',
             }}
           >
             Contact

@@ -1,16 +1,15 @@
-import {styled,Text,Card, Button} from '@influenze/ui-lib';
-
+import { styled, Text, Card, Button } from '@influenze/ui-lib';
 
 export const PlansContainer = styled('div')({
-    display: 'flex',
-    gap:'10px',
-    alignItems: 'center',
-    marginBottom:'15px'
+  display: 'flex',
+  gap: '10px',
+  alignItems: 'center',
+  marginBottom: '15px',
 });
 
 export const PlanDescription = styled(Text)({
-    fontWeight:'bold',
-    fontFamily:'sans-serif'
+  fontWeight: 'bold',
+  fontFamily: 'sans-serif',
 });
 
 export const ImageContainer = styled('div')({
@@ -20,13 +19,12 @@ export const ImageContainer = styled('div')({
     height:'20px',
 });
 
-
 export const StyledCard = styled(Card)({
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     width: '400px',
-    border: '1px solid lightgray',
-    borderRadius: '10px',
+    borderRadius: '16px',
     height: '470px',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     display: 'flex',     
     flexDirection: 'column',
@@ -38,28 +36,28 @@ export const StyledCard = styled(Card)({
     }
 });
 export const PlanTitleContainer = styled('div')({
-    width:'100px',
-    height:'30px',
-    border:'1px solid gray',
-    borderRadius:'10px',
-    display:'flex',
-    justifyContent:'center'
+  width: '100px',
+  height: '30px',
+  border: '1px solid gray',
+  borderRadius: '10px',
+  display: 'flex',
+  justifyContent: 'center',
 });
 
 export const SubFlexContainer = styled('div')({
-    display: 'flex',
-    gap:'5px',
-    margin: '10px 0 10px 0'
+  display: 'flex',
+  gap: '5px',
+  margin: '10px 0 10px 0',
 });
 
 export const PlanTitle = styled(Text)({
-    fontWeight:'bold',
-    alignSelf:'center'
+  fontWeight: 'bold',
+  alignSelf: 'center',
 });
 
 export const StyledHr = styled('hr')({
-    border:' none',
-    borderTop: '0.5px solid gray'
+  border: ' none',
+  borderTop: '0.5px solid gray',
 });
 
 export const StyledButton = styled(Button)({

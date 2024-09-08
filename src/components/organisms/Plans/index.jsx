@@ -21,6 +21,7 @@ const Tier1 = [
   },
 ];
 
+
 const Tier2 = [
   { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '5 Users' },
   {
@@ -70,43 +71,52 @@ const Plans = () => {
   }, []);
 
   return (
-    <div style={{
-      backgroundImage: `radial-gradient(at 62% 94%, hsla(240,40%,18%,0.45) 0px, transparent 50%),
-    radial-gradient(at 64% 53%, hsla(0,0%,0%,0.63) 0px, transparent 50%),
-    radial-gradient(at 80% 30%, hsla(240,32%,17%,1) 0px, transparent 50%)`
-     }}>
-      <Heading1 variant="h5">Affordable Plans</Heading1>
-      <Heading2 variant="body1">Choose the perfect plan for your business needs.</Heading2>
-      <FlexContainer ref={tierCardRef} className="plans-container">
-        <TierPlanCard
-          planTitle="Basic Plan"
-          price="₹4"
-          monthlyCost="₹99/month"
-          description="Ideal for personal use"
-          benefits={Tier1}
-          buttonText="Start Now"
-          buttonVariant="contained"
-        />
-        <TierPlanCard
-          planTitle="Pro Plan"
-          price="₹12"
-          monthlyCost="₹299/month"
-          description="Perfect for teams"
-          benefits={Tier2}
-          buttonText="Get Started"
-          buttonVariant="contained"
-        />
-        <TierPlanCard
-          planTitle="Pro Plan"
-          price="₹12"
-          monthlyCost="₹299/month"
-          description="Perfect for teams"
-          benefits={Tier2}
-          buttonText="Get Started"
-          buttonVariant="contained"
-        />
-      </FlexContainer>
-    </div>
+    <>
+      <Heading1 variant="h2">Affordable Plans:</Heading1>
+      <Heading2 variant="h2">
+        Choose the perfect plan tailored for your business needs
+      </Heading2>
+      <div
+        style={{
+          backgroundImage: `radial-gradient(at 61% 26%, hsla(168,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 81% 43%, hsla(240,79%,28%,0.76) 0px, transparent 50%),
+radial-gradient(at 0% 15%, hsla(308,0%,0%,0.73) 0px, transparent 50%),
+radial-gradient(at 46% 59%, hsla(344,0%,0%,0.75) 0px, transparent 50%),
+radial-gradient(at 58% 67%, hsla(240,75%,18%,0.82) 0px, transparent 50%),
+radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
+        }}
+      >
+        <FlexContainer ref={tierCardRef}>
+          <TierPlanCard
+            planTitle="Basic Plan"
+            price="₹4"
+            monthlyCost="₹99/month"
+            description="Ideal for personal use"
+            benefits={Tier1}
+            buttonText="Start Now"
+            buttonVariant="contained"
+          />
+          <TierPlanCard
+            planTitle="Pro Plan"
+            price="₹12"
+            monthlyCost="₹299/month"
+            description="Perfect for teams"
+            benefits={Tier2}
+            buttonText="Get Started"
+            buttonVariant="contained"
+          />
+          <TierPlanCard
+            planTitle="Pro Plan"
+            price="₹12"
+            monthlyCost="₹299/month"
+            description="Perfect for teams"
+            benefits={Tier2}
+            buttonText="Get Started"
+            buttonVariant="contained"
+          />
+        </FlexContainer>
+      </div>
+    </>
   );
 };
 
