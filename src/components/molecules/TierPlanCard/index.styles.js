@@ -61,7 +61,7 @@ export const StyledHr = styled('hr')({
 });
 
 export const StyledButton = styled(Button)({
-    width:'100%',
+    width:'80%',
     justifyItems:'flex-end',
     borderRadius:'10px',
     color:'black',

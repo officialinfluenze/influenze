@@ -1,4 +1,5 @@
 import React from 'react';
+import FAQ from 'src/components/organisms/FAQ';
 import FirstContainer from 'src/components/organisms/FirstContainer';
 import Header from 'src/components/organisms/Navbar';
 import Plans from 'src/components/organisms/Plans';
@@ -13,6 +14,7 @@ const HomeScreen: React.FC = () => {
       <Page />
       <Plans />
       <Testimonials />
+      <FAQ/>
     </div>
   );
 };

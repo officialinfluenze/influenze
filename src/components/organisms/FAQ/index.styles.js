@@ -21,4 +21,5 @@ export const AccordianContainer = styled('div')({
     flexDirection: 'column', 
     alignItems: 'center',
     justifyContent:'center',
+    backgroundColor:'white'
 })
