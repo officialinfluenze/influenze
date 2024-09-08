@@ -18,6 +18,8 @@ export const Heading2 = styled(Text)({
     fontStyle: 'normal',
     textAlign: 'center',
     color:'#dddddd',
+    marginTop:'20px',
+    marginBottom: '25px',
     fontWeight: 'bold',
     letterSpacing: '-1.5px', 
     maxWidth:'80%',

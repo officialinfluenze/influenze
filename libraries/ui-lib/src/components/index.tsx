@@ -14,5 +14,6 @@ export { default as AccordionSummary } from './AccordionSummary';
 export { default as AccordionDetails } from './AccordionDetails';
 export { default as Avatar } from './Avatar'
 
+
 //types
 // export type { TypographyProps } from './Text';
