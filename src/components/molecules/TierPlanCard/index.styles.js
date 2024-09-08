@@ -22,17 +22,17 @@ export const ImageContainer = styled('div')({
 });
 
 export const StyledCard = styled(Card)({
-  width: '400px',
-  border: '1px solid lightgray',
-  borderRadius: '10px',
-  height: '470px',
-  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  '&:hover': {
-    transform: 'scale(1.05)',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
-  },
-});
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    width: '400px',
+    borderRadius: '16px',
+    height: '470px',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    '&:hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+    },
+  });
 
 export const PlanTitleContainer = styled('div')({
   width: '100px',

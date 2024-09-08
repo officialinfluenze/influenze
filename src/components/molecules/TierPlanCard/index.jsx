@@ -15,7 +15,7 @@ import {
 const PlanBenefits = ({ icon, description }) => (
   <PlansContainer>
     <ImageContainer>{icon}</ImageContainer>
-    <PlanDescription>{description}</PlanDescription>
+    <PlanDescription sx={{ color: 'white' }}>{description}</PlanDescription>
   </PlansContainer>
 );
 
@@ -31,17 +31,19 @@ const TierPlanCard = ({
   <StyledCard>
     <CardContent>
       <PlanTitleContainer>
-        <PlanTitle variant="body1">{planTitle}</PlanTitle>
+        <PlanTitle variant="body1" sx={{ color: 'white' }}>
+          {planTitle}
+        </PlanTitle>
       </PlanTitleContainer>
       <SubFlexContainer>
-        <Text variant="h4" sx={{ fontWeight: 'bold' }}>
+        <Text variant="h4" sx={{ fontWeight: 'bold', color: 'white' }}>
           {price}
         </Text>
-        <span style={{ alignSelf: 'center', color: 'gray' }}>
+        <span style={{ alignSelf: 'center', color: 'white' }}>
           {monthlyCost}
         </span>
       </SubFlexContainer>
-      <Text style={{ color: 'gray' }}>{description}</Text>
+      <Text style={{ color: 'white' }}>{description}</Text>
       <StyledHr />
       <div>
         {benefits.map((benefit, index) => (
