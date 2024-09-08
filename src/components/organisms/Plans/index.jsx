@@ -70,7 +70,11 @@ const Plans = () => {
   }, []);
 
   return (
-    <>
+    <div style={{
+      backgroundImage: `radial-gradient(at 62% 94%, hsla(240,40%,18%,0.45) 0px, transparent 50%),
+    radial-gradient(at 64% 53%, hsla(0,0%,0%,0.63) 0px, transparent 50%),
+    radial-gradient(at 80% 30%, hsla(240,32%,17%,1) 0px, transparent 50%)`
+     }}>
       <Heading1 variant="h5">Affordable Plans</Heading1>
       <Heading2 variant="body1">Choose the perfect plan for your business needs.</Heading2>
       <FlexContainer ref={tierCardRef} className="plans-container">
@@ -102,7 +106,7 @@ const Plans = () => {
           buttonVariant="contained"
         />
       </FlexContainer>
-    </>
+    </div>
   );
 };
 
