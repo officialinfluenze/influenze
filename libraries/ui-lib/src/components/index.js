@@ -9,7 +9,7 @@ export { default as CardActions } from './CardActions';
 export { default as CardContent } from './CardContent';
 export { default as CardMedia } from './CardMedia';
 export { default as CardActionArea } from './CardActionArea';
-export { default as Accordion} from './Accordion';
+export { default as Accordion } from './Accordion';
 export { default as AccordionSummary } from './AccordionSummary';
 export { default as AccordionDetails } from './AccordionDetails';
 export { default as Avatar } from './Avatar'

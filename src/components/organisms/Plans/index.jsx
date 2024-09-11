@@ -2,18 +2,24 @@ import { useRef, useEffect } from 'react';
 import { Icons } from '@influenze/ui-lib';
 import { Heading1, Heading2, FlexContainer } from './index.styles';
 import TierPlanCard from 'src/components/molecules/TierPlanCard';
- const CheckCircleOutlineIcon = Icons.CheckCircleOutlineIcon;
+const CheckCircleOutlineIcon = Icons.CheckCircleOutlineIcon;
 
 const Tier1 = [
-  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '1 User' },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Email Support',
+    description: 'Single platform',
   },
-  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '5 Projects' },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Basic Analytics',
+    description: 'AI generated & static content',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Basic analytics',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Email support for inquiries',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -21,25 +27,59 @@ const Tier1 = [
   },
 ];
 
-
 const Tier2 = [
-  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: '5 Users' },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Priority Support',
+    description: 'Multiple platforms',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Unlimited Projects',
+    description: 'Organic content creation and posting',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Advanced Analytics',
+    description: 'Advanced analytics',
   },
-  { icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />, description: 'Full Access' },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Custom Reports',
+    description: 'SEO',
+  },
+
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Pay per click',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Email marketing',
+  },
+];
+
+const Tier3 = [
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Multiple ',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Organic content creation and posting',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Advanced analytics',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'SEO',
+  },
+
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Pay per click',
+  },
+  {
+    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
+    description: 'Email marketing',
   },
 ];
 
@@ -88,29 +128,29 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
       >
         <FlexContainer ref={tierCardRef}>
           <TierPlanCard
-            planTitle="Basic Plan"
+            planTitle="Starter"
             price="₹4"
             monthlyCost="₹99/month"
-            description="Ideal for personal use"
+            description="Ideal for personal use or small businesses"
             benefits={Tier1}
             buttonText="Start Now"
             buttonVariant="contained"
           />
           <TierPlanCard
-            planTitle="Pro Plan"
+            planTitle="Growth"
             price="₹12"
             monthlyCost="₹299/month"
-            description="Perfect for teams"
+            description="Perfect for small teams and businesses"
             benefits={Tier2}
             buttonText="Get Started"
             buttonVariant="contained"
           />
           <TierPlanCard
-            planTitle="Pro Plan"
+            planTitle="Expert"
             price="₹12"
             monthlyCost="₹299/month"
-            description="Perfect for teams"
-            benefits={Tier2}
+            description="Ideal for large businesses or organizations"
+            benefits={Tier3}
             buttonText="Get Started"
             buttonVariant="contained"
           />

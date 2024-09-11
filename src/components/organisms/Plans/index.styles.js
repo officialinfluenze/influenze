@@ -28,6 +28,7 @@ export const Heading2 = styled(Text)({
 
 export const FlexContainer = styled('div')({
     marginTop: '100px',
+    padding:'12px',
     display: 'flex',
     gap: '20px',
     justifyContent: 'center',
