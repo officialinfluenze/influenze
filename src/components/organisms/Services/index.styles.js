@@ -29,10 +29,6 @@ export const ServicesContainer = styled('div')({
     boxSizing: 'border-box',
     padding:'20px 30px 30px 30px',
     minHeight:'160px',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    '&:hover': {
-        transform: 'translateY(-10px)',   
-      }
 });
 
 export const ServiceTitle = styled(Text)({

@@ -30,7 +30,7 @@ const Tier1 = [
 const Tier2 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Multiple platforms',
+    description: 'Multi-platform social media',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -42,7 +42,7 @@ const Tier2 = [
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'SEO',
+    description: 'Search engine optimization',
   },
 
   {
@@ -58,19 +58,19 @@ const Tier2 = [
 const Tier3 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Multiple ',
+    description: 'Multi-platform social media ',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Organic content creation and posting',
+    description: 'Adverts for social media',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Advanced analytics',
+    description: 'Lead generation',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'SEO',
+    description: 'Influencer marketing',
   },
 
   {

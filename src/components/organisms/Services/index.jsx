@@ -27,7 +27,11 @@ const containerVariants = {
       duration: 0.5,
     },
   }),
+  hover: {
+    y: -10,
+  },
 };
+
 const MotionServicesContainer = motion(ServicesContainer);
 
 const Services = ({ icon, title, description, index }) => (
@@ -37,6 +41,7 @@ const Services = ({ icon, title, description, index }) => (
     variants={containerVariants}
     custom={index}
     viewport={{ once: true, amount: 0.5 }}
+    whileHover="hover"
   >
     <div style={{ display: 'flex' }}>
       <ImageContainer>{icon}</ImageContainer>
