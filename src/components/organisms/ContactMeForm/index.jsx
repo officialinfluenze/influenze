@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Text, IconButton, Icons, Button, Tooltip } from '@influenze/ui-lib';
-import { StyledTextField } from './index.styles';
-const { ArrowDropDown } = Icons;
+import React, { useState, useEffect } from 'react';
+import { Text, Button, Tooltip } from '@influenze/ui-lib';
+import { StyledTextField, FlexContainer } from './index.styles';
 const ContactMeForm = () => {
   // Add your component logic here
   const [disabled, setDisabled] = useState(true);
@@ -10,16 +9,8 @@ const ContactMeForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submissionStatus, setSubmissionStatus] = useState('');
-  const [accordianState, setAccordianState] = useState(false);
-  const accordianRef = useRef(null);
-
-  const handleAccordian = () => {
-    setAccordianState(!accordianState);
-    window.scrollTo({
-      top: accordianRef.current.offsetTop + 700,
-      behavior: 'smooth',
-    });
-  };
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (name === '' || phone === '' || email === '' || message === '') {
@@ -38,6 +29,8 @@ const ContactMeForm = () => {
     formData.append('entry.1045781291', email);
     formData.append('entry.839337160', message);
 
+    setLoading(true);
+    setError(null);
     try {
       const response = await fetch(
         'https://docs.google.com/forms/d/e/1FAIpQLSeRSh6Mpe97R9-_gM5GqF-Z_befAOsJcDZgeEIcEllrxMxZyQ/formResponse',
@@ -47,13 +40,11 @@ const ContactMeForm = () => {
           mode: 'no-cors',
         },
       );
-
       if (response.ok || response.status === 0) {
         setSubmissionStatus('success');
       } else {
         setSubmissionStatus('failure');
       }
-
       setName('');
       setPhone('');
       setEmail('');
@@ -61,6 +52,10 @@ const ContactMeForm = () => {
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmissionStatus('failure');
+      setLoading(false);
+      setError(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -70,25 +65,35 @@ const ContactMeForm = () => {
         action="https://docs.google.com/forms/d/e/1FAIpQLSeRSh6Mpe97R9-_gM5GqF-Z_befAOsJcDZgeEIcEllrxMxZyQ/formResponse"
         onSubmit={handleSubmit}
       >
-        <div>
-          <StyledTextField
-            name="entry.2005620554"
-            label="name"
-            value={name}
-            onChange={(event) => {
-              setName(event.target.value);
+        <div
+          style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              gap: '10px',
+              width: '100%',
             }}
-            required
-          />
-          <StyledTextField
-            name="entry.1166974658"
-            value={phone}
-            label="phone number"
-            onChange={(event) => {
-              setPhone(event.target.value);
-            }}
-            required
-          />
+          >
+            <StyledTextField
+              name="entry.2005620554"
+              label="name"
+              value={name}
+              onChange={(event) => {
+                setName(event.target.value);
+              }}
+              required
+            />
+            <StyledTextField
+              name="entry.1166974658"
+              value={phone}
+              label="phone number"
+              onChange={(event) => {
+                setPhone(event.target.value);
+              }}
+              required
+            />
+          </div>
           <StyledTextField
             name="entry.1045781291"
             label="email"
@@ -109,14 +114,16 @@ const ContactMeForm = () => {
               setMessage(event.target.value);
             }}
             required
+            rows={10}
           />
         </div>
         <Tooltip title={disabled ? 'Fill in all the details' : 'Submit'}>
           <Button
             type="submit"
-            variant="outlined"
+            variant="contained"
             style={{
               color: '#fff',
+              marginTop: '40px',
             }}
           >
             Submit
@@ -126,84 +133,89 @@ const ContactMeForm = () => {
     );
   };
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        marginTop: '50px',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '10px',
-      }}
-    >
+    <FlexContainer>
       <div
         style={{
           display: 'flex',
-          gap: '20px',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+          padding: '40px 0px 0px 0px',
+          gap: '10px',
         }}
       >
-        <Text
-          variant="h3"
-          style={{ color: '#dddddd', alignSelf: 'center', fontWeight: 600 }}
-        >
-          Contact Us
-        </Text>
-        <IconButton
-          size="small"
-          onClick={handleAccordian}
-          color="primary"
-          variant="text"
+        {submissionStatus === 'success' ? (
+          <div
+            style={{
+              display: 'flex',
+              gap: '20px',
+            }}
+          >
+            <Text style={{ color: 'green' }}>Submitted Successfully</Text>
+          </div>
+        ) : (
+          (submissionStatus === 'failure' || error) && (
+            <div
+              style={{
+                display: 'flex',
+                gap: '20px',
+              }}
+            >
+              <Text style={{ color: 'red' }}>Submission Failed</Text>
+            </div>
+          )
+        )}
+
+        <div
           style={{
-            minWidth: 'fit-content',
-            justifySelf: 'center',
-            width: '60px',
+            display: 'flex',
+            width: '100%',
+            alignContent: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'transparent',
+            minHeight: 'auto',
           }}
         >
-          {accordianState ? (
-            <ArrowDropDown
-              style={{ transform: 'rotate(180deg)', fontSize: '50px' }}
-            />
-          ) : (
-            <ArrowDropDown style={{ fontSize: '50px' }} />
-          )}
-        </IconButton>
+          {loading ? <Text>Submitting.....</Text> : renderForm()}
+        </div>
       </div>
       <div
         style={{
           display: 'flex',
-          gap: '20px',
+          flexDirection: 'column',
         }}
       >
-        <Text style={{ color: '#dddddd' }}>
-          We are here to help you. Please fill in the form below completely and
-          we will get back to you.
-        </Text>
-      </div>
-      {submissionStatus === 'success' && (
+        <div
+          style={{
+            display: 'flex',
+            gap: '20px',
+            justifyContent: 'center',
+          }}
+        >
+          <Text
+            variant="h3"
+            style={{
+              color: '#dddddd',
+              alignSelf: 'center',
+              fontWeight: 600,
+            }}
+          >
+            Contact Us
+          </Text>
+        </div>
         <div
           style={{
             display: 'flex',
             gap: '20px',
           }}
         >
-          <Text style={{ color: 'green' }}>Submitted Successfully</Text>
+          <Text style={{ color: '#dddddd' }}>
+            We are here to help you. Please fill in the form below completely
+            and we will get back to you.
+          </Text>
         </div>
-      )}
-
-      <div
-        ref={accordianRef}
-        style={{
-          display: 'flex',
-          width: '100%',
-          alignContent: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'transparent',
-          minHeight: accordianState ? 'auto' : '00px',
-        }}
-      >
-        {accordianState && renderForm()}
       </div>
-    </div>
+    </FlexContainer>
   );
 };
 
