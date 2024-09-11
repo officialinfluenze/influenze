@@ -10,6 +10,6 @@ export { default as CardContent } from './CardContent';
 export { default as CardMedia } from './CardMedia';
 export { default as CardActionArea } from './CardActionArea';
 export { default as Avatar } from './Avatar';
-
+export { default as TextField } from './TextField';
 //types
 // export type { TypographyProps } from './Text';

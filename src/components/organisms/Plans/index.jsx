@@ -20,7 +20,6 @@ const Tier1 = [
   },
 ];
 
-
 const Tier2 = [
   { icon: <DoneIcon sx={{ fontSize: '20px' }} />, description: '5 Users' },
   {

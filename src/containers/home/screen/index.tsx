@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactMeForm from 'src/components/organisms/ContactMeForm';
 import FirstContainer from 'src/components/organisms/FirstContainer';
 import Header from 'src/components/organisms/Navbar';
 import Plans from 'src/components/organisms/Plans';
@@ -13,6 +14,7 @@ const HomeScreen: React.FC = () => {
       <Page />
       <Plans />
       <Testimonials />
+      <ContactMeForm />
     </div>
   );
 };
