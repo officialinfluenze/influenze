@@ -11,5 +11,6 @@ export { default as CardMedia } from './CardMedia';
 export { default as CardActionArea } from './CardActionArea';
 export { default as Avatar } from './Avatar';
 export { default as TextField } from './TextField';
+export { default as IconButton } from './IconButton';
 //types
 // export type { TypographyProps } from './Text';

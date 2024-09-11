@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Text, Button, Icons } from '@influenze/ui-lib';
+import { Text, IconButton, Icons } from '@influenze/ui-lib';
 
 const { ArrowDropDown } = Icons;
 const ContactMeForm = () => {
@@ -30,24 +30,31 @@ const ContactMeForm = () => {
           gap: '20px',
         }}
       >
-        <Text variant="h2" style={{ color: '#dddddd', alignSelf: 'center' }}>
+        <Text
+          variant="h3"
+          style={{ color: '#dddddd', alignSelf: 'center', fontWeight: 600 }}
+        >
           Contact Us
         </Text>
-        <Button
+        <IconButton
           size="small"
           onClick={handleAccordian}
           color="primary"
           variant="text"
-          style={{ maxWidth: 'fit-content', justifySelf: 'center' }}
+          style={{
+            minWidth: 'fit-content',
+            justifySelf: 'center',
+            width: '60px',
+          }}
         >
           {accordianState ? (
             <ArrowDropDown
-              style={{ transform: 'rotate(180deg)', fontSize: '34px' }}
+              style={{ transform: 'rotate(180deg)', fontSize: '50px' }}
             />
           ) : (
-            <ArrowDropDown style={{ fontSize: '34px' }} />
+            <ArrowDropDown style={{ fontSize: '50px' }} />
           )}
-        </Button>
+        </IconButton>
       </div>
 
       <div

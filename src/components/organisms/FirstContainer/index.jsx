@@ -101,7 +101,7 @@ const FirstContainer = () => {
       <SubBottomContainer>
         <Text
           variant={'h6'}
-          color={'textSecondary'}
+          color={'#dddddd'}
           style={{
             fontWeight: 550,
             alignSelf: 'center',

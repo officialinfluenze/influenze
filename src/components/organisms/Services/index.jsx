@@ -13,6 +13,7 @@ import analytics from '../../../assets/images/Analytics & SEO.svg';
 import branding from '../../../assets/images/Branding and Marketing.svg';
 import payperclick from '../../../assets/images/Pay-Per-Click.svg';
 import { ServiceDescription } from './index.styles';
+import PropTypes from 'prop-types';
 
 const Services = ({ icon, title, description }) => (
   <ServicesContainer>
@@ -106,7 +107,7 @@ const Page = () => {
   return (
     <>
       <Heading1 variant="body1">Boost Your Brand</Heading1>
-      <Heading2 variant="h5">
+      <Heading2 variant="h5" color="#dddddd">
         Innovative Social Media Marketing Solutions
       </Heading2>
       <div
@@ -125,6 +126,12 @@ const Page = () => {
       </div>
     </>
   );
+};
+
+Services.propTypes = {
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Page;
