@@ -81,7 +81,13 @@ const ContactMeForm = () => {
               minHeight: '800px',
             }}
           >
-            Loading…
+            <Text
+              variant="h3"
+              style={{ justifySelf: 'center' }}
+              color="#dddddd"
+            >
+              Loading…
+            </Text>
           </iframe>
         )}
       </div>
