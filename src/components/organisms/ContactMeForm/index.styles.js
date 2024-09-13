@@ -34,13 +34,31 @@ export const FlexContainer = styled('div')({
   gap: '10%',
   width: '100%',
   marginTop: '50px',
-  padding: '0% 0% 0% 0%',
+  padding: '14% 0% 14% 0%',
   justifyContent: 'space-around',
+
+  background: 'linear-gradient(138deg, #0f1960, #5364d9, #e86116)',
+  backgroundSize: '600% 600%',
+  animation: 'AnimationName 12s ease infinite',
+
+  maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
+  WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
+
   '@media (max-width: 750px)': {
     flexDirection: 'column-reverse',
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  '@keyframes AnimationName': {
+    '0%': { backgroundPosition: '20% 0%' },
+    '50%': { backgroundPosition: '81% 100%' },
+    '100%': { backgroundPosition: '20% 0%' },
+  },
 });
 
-export const FormContainer = styled('div')({});
+
+
+export const FormContainer = styled('div')({
+  minWidth: '700px',
+});

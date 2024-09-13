@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Text, Button, Tooltip } from '@influenze/ui-lib';
 import { StyledTextField, FlexContainer } from './index.styles';
 const ContactMeForm = () => {
-  // Add your component logic here
   const [disabled, setDisabled] = useState(true);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -66,8 +65,17 @@ const ContactMeForm = () => {
         onSubmit={handleSubmit}
       >
         <div
-          style={{ display: 'flex', flexDirection: 'column', width: '100%' }}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            minWidth: '500px',
+            paddingLeft: '20%',
+          }}
         >
+          <Text variant="h2" color="white">
+            Just say Hello!
+          </Text>
           <div
             style={{
               display: 'flex',
@@ -116,19 +124,20 @@ const ContactMeForm = () => {
             required
             rows={10}
           />
+          <Tooltip title={disabled ? 'Fill in all the details' : 'Submit'}>
+            <Button
+              type="submit"
+              variant="contained"
+              style={{
+                color: '#fff',
+                marginTop: '40px',
+                width: '16%',
+              }}
+            >
+              Submit
+            </Button>
+          </Tooltip>
         </div>
-        <Tooltip title={disabled ? 'Fill in all the details' : 'Submit'}>
-          <Button
-            type="submit"
-            variant="contained"
-            style={{
-              color: '#fff',
-              marginTop: '40px',
-            }}
-          >
-            Submit
-          </Button>
-        </Tooltip>
       </form>
     );
   };
@@ -140,7 +149,7 @@ const ContactMeForm = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'flex-start',
-          padding: '40px 0px 0px 0px',
+          padding: '0px 0px 0px 0px',
           gap: '10px',
         }}
       >
@@ -207,11 +216,14 @@ const ContactMeForm = () => {
           style={{
             display: 'flex',
             gap: '20px',
+            justifyContent: 'center',
           }}
         >
-          <Text style={{ color: '#dddddd' }}>
-            We are here to help you. Please fill in the form below completely
-            and we will get back to you.
+          <Text style={{ color: '#dddddd', width: '80%' }}>
+            We are here to help you! Please fill in the form below with your
+            contact details and a brief description of your inquiry or issue.
+            The more information you provide, the better we can assist you. Rest
+            assured, we will get back to you as soon as possible.
           </Text>
         </div>
       </div>
