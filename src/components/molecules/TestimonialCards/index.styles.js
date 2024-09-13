@@ -6,6 +6,7 @@ export const StyledCard = styled(Card)({
     maxWidth: 450,
     border: '1px solid lightgray',
     borderRadius: '10px',
+    alignSelf: 'center',
 });
 
 export const TestimonialContainer = styled('div')({
