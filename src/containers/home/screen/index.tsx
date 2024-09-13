@@ -1,4 +1,5 @@
 import React from 'react';
+import CardSection from 'src/components/molecules/CardSection';
 import FAQ from 'src/components/organisms/FAQ';
 import FirstContainer from 'src/components/organisms/FirstContainer';
 import Header from 'src/components/organisms/Navbar';
@@ -11,10 +12,11 @@ const HomeScreen: React.FC = () => {
     <div>
       <Header />
       <FirstContainer />
+      <CardSection />
       <Page />
       <Plans />
       <Testimonials />
-      <FAQ/>
+      <FAQ />
     </div>
   );
 };
