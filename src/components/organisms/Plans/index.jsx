@@ -30,11 +30,11 @@ const Tier1 = [
 const Tier2 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Multi-platform social media',
+    description: 'Multi-platform ',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Organic content creation and posting',
+    description: 'Organic content production',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -58,11 +58,11 @@ const Tier2 = [
 const Tier3 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Multi-platform social media ',
+    description: 'Everyting in Growth plan',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Adverts for social media',
+    description: 'Adverts on social media',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -72,14 +72,9 @@ const Tier3 = [
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Influencer marketing',
   },
-
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Pay per click',
-  },
-  {
-    icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Email marketing',
+    description: 'Community management',
   },
 ];
 
@@ -140,7 +135,7 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
             planTitle="Growth"
             price="₹12"
             monthlyCost="₹299/month"
-            description="Perfect for small teams and businesses"
+            description="Ideal for small teams and businesses"
             benefits={Tier2}
             buttonText="Get Started"
             buttonVariant="contained"
