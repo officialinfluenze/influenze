@@ -20,7 +20,6 @@ const Header = () => {
         />
         <Text
           variant="h6"
-          color="rgb(10 10 10 / 87%)"
           style={{ fontFamily: 'Arial, sans-serif' }}
           sx={{ fontWeight: '550', color: 'white' }}
         >
@@ -30,9 +29,8 @@ const Header = () => {
           <Button
             sx={{
               textTransform: 'none',
-              color: 'rgb(10 10 10 / 87%)',
-              fontWeight: 550,
               color: 'white',
+              fontWeight: 550,
             }}
           >
             Home
@@ -40,7 +38,6 @@ const Header = () => {
           <Button
             sx={{
               textTransform: 'none',
-              color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
               color: 'white',
             }}
@@ -50,7 +47,6 @@ const Header = () => {
           <Button
             sx={{
               textTransform: 'none',
-              color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
               color: 'white',
             }}
@@ -60,7 +56,6 @@ const Header = () => {
           <Button
             sx={{
               textTransform: 'none',
-              color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
               color: 'white',
             }}
@@ -70,7 +65,6 @@ const Header = () => {
           <Button
             sx={{
               textTransform: 'none',
-              color: 'rgb(10 10 10 / 87%)',
               fontWeight: 550,
               color: 'white',
             }}
