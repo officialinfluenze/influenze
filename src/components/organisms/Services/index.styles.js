@@ -53,7 +53,7 @@ export const Heading1 = styled(Text)({
     fontSize: '54px',
     color:'#dddddd',
     textAlign: 'center',
-    marginTop: '200px',
+    marginTop: '100px',
     fontWeight: 'bold', 
     letterSpacing: '-1.5px',
     lineHeight: '110%'

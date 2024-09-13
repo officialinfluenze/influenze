@@ -6,6 +6,7 @@ import {
   Description,
   Percentageof,
   Heading,
+  SubHeading,
 } from './index.styles';
 
 const data = [
@@ -69,29 +70,57 @@ const data = [
 
 const CardSection = () => {
   return (
-    <div style={{ overflow: 'hidden' }}>
-      <Heading color="white">Why choose Influenze</Heading>
-      <CardContainer>
-        {[...data, ...data, ...data, ...data, , ...data, , ...data].map(
-          (item, index) => (
-            <Card key={index}>
-              <div
-                style={{
-                  borderRadius: '16px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  alignSelf: 'center',
-                  opacity: '1',
-                }}
-              >
-                <Category>{item.category}</Category>
-              </div>
-              <Percentage>{item.percentage}</Percentage>
-              <Percentageof>{item.percentageof}</Percentageof>
-              <Description>{item.description}</Description>
-            </Card>
-          ),
-        )}
-      </CardContainer>
+    <div
+      style={{
+        backgroundImage: `radial-gradient(at 29% 62%, hsla(239,58%,15%,1) 0px, transparent 50%),
+radial-gradient(at 100% 0%, hsla(27,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 53% 54%, hsla(189,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 73% 54%, hsla(240,50%,25%,1) 0px, transparent 50%),
+radial-gradient(at 74% 61%, hsla(239,34%,22%,1) 0px, transparent 50%),
+radial-gradient(at 100% 100%, hsla(340,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(0,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(0,0%,0%,0.44) 0px, transparent 50%)`,
+        paddingTop: '100px',
+        paddingBottom: '100px',
+      }}
+    >
+      <div style={{ overflow: 'hidden' }}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
+          <Heading>Why choose us</Heading>
+          <SubHeading>
+            Our commitment to delivering exceptional results through a blend of
+            industry expertise, personalized service, and innovative solutions.
+          </SubHeading>
+        </div>
+        <CardContainer>
+          {[...data, ...data, ...data, ...data, , ...data, , ...data].map(
+            (item, index) => (
+              <Card key={index}>
+                <div
+                  style={{
+                    borderRadius: '16px',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    alignSelf: 'center',
+                    opacity: '1',
+                  }}
+                >
+                  <Category>{item.category}</Category>
+                </div>
+                <Percentage>{item.percentage}</Percentage>
+                <Percentageof>{item.percentageof}</Percentageof>
+                <Description>{item.description}</Description>
+              </Card>
+            ),
+          )}
+        </CardContainer>
+      </div>
     </div>
   );
 };
