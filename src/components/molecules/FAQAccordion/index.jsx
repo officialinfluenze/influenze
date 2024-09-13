@@ -2,7 +2,6 @@ import {Accordion,AccordionDetails,AccordionSummary,Icons} from '@influenze/ui-l
 import PropTypes from 'prop-types';
 const ExpandMoreIcon = Icons.ExpandMoreIcon;
 
-
 const FAQAccordionItem = ({ title, content }) => {
     return (
         <Accordion square='false' sx={{border:'1px solid lightgray',borderRadius:'10px',BorderAllRounded: "true", margin:'10px', '&:before': {
