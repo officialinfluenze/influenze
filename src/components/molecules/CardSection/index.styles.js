@@ -32,7 +32,8 @@ export const Card = styled('div')({
 });
 
 export const Category = styled('div')({
-  fontSize: '12px',
+  fontFamily:'Be Vietnam Pro, sans-serif',
+  fontSize: '14px',
   fontWeight: 'bold',
   background: 'linear-gradient(279deg, rgb(161, 94, 232) 0%, rgb(109, 141, 255) 100%)',
   WebkitBackgroundClip: 'text',
@@ -50,9 +51,10 @@ export const Percentage = styled('div')({
 });
 
 export const Description = styled('div')({
+  fontFamily:'Be Vietnam Pro, sans-serif',
   fontSize: '16px',
   lineHeight: '1.5',
-  margin: '10px 8px 10px 8px', 
+  margin: '30px 8px 10px 8px', 
 });
 
 export const Percentageof = styled('div')({
@@ -65,9 +67,20 @@ export const Heading = styled(Text)({
   fontSize: '54px',
   color:'#dddddd',
   textAlign: 'center',
-  marginTop: '200px',
-  marginBottom: '200px',
   fontWeight: 'bold', 
   letterSpacing: '-1.5px',
-  lineHeight: '110%'
+  lineHeight: '110%',
+  margin:'6px'
+});
+
+export const SubHeading = styled(Text)({
+  fontFamily: 'sans-serif',
+  fontSize: '24px', 
+  fontStyle: 'normal',
+  textAlign: 'center',
+  marginBottom: '150px',
+  color:'#6e6e73',
+  maxWidth:'60%',
+  fontWeight: 'bold',
+  letterSpacing: '-1.5px', 
 });
