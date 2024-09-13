@@ -9,7 +9,6 @@ export { default as CardActions } from './CardActions';
 export { default as CardContent } from './CardContent';
 export { default as CardMedia } from './CardMedia';
 export { default as CardActionArea } from './CardActionArea';
-// export { default as Avatar } from './Avatar';
 export { default as TextField } from './TextField';
 export { default as IconButton } from './IconButton';
 export { default as Accordion } from './Accordion';

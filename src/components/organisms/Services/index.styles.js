@@ -29,10 +29,6 @@ export const ServicesContainer = styled('div')({
     boxSizing: 'border-box',
     padding:'20px 30px 30px 30px',
     minHeight:'160px',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    '&:hover': {
-        transform: 'translateY(-10px)',   
-      }
 });
 
 export const ServiceTitle = styled(Text)({
@@ -52,15 +48,41 @@ export const ServiceDescription = styled(Text)({
 });
 
 export const Heading1 = styled(Text)({
-    fontWeight:'bold',
-    textAlign:'center',
-    color:'gray',
-    marginTop:'20px',
-
+    fontFamily: 'sans-serif',
+    fontStyle: 'normal',
+    fontSize: '54px',
+    color:'#dddddd',
+    textAlign: 'center',
+    marginTop: '100px',
+    fontWeight: 'bold', 
+    letterSpacing: '-1.5px',
+    lineHeight: '110%'
 });
 
 export const Heading2 = styled(Text)({
-    fontWeight:'bold',
-    textAlign:'center',
-     margin:'10px 0 25px 0'
-})
+    fontFamily: 'sans-serif',
+    fontSize: '54px', 
+    fontStyle: 'normal',
+    textAlign: 'center',
+    color:'#dddddd',
+    marginTop:'20px',
+    marginBottom: '25px',
+    fontWeight: 'bold',
+    letterSpacing: '-1.5px', 
+    maxWidth:'80%',
+    margin:'auto',
+});
+
+export const FlexContainer = styled('div')({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '150px',
+    opacity: 0,
+    transition: 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out',
+    transform: 'translateY(50px)',
+    '&.animate-card': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+});

@@ -8,33 +8,11 @@ import {
   ImageContainer,
   StyledMainImage,
   SubTopTextContainer,
-  SubBottomContainer,
 } from './index.styles';
-import ImageCarousel from 'src/components/molecules/ImageCarousel';
-import Image_1 from '../../../assets/images/1-png.png';
-import Image_2 from '../../../assets/images/2-png.png';
-import Image_3 from '../../../assets/images/3-png.png';
-import Image_4 from '../../../assets/images/4-png.png';
-import Image_5 from '../../../assets/images/5-png.png';
-import Image_6 from '../../../assets/images/6-png.png';
 import headerimg from '../../../assets/images/headerimg.png';
 
 const FirstContainer = () => {
   const mainImage = headerimg;
-  const imagesSrc = [
-    Image_1,
-    Image_2,
-    Image_3,
-    Image_4,
-    Image_5,
-    Image_6,
-    Image_1,
-    Image_2,
-    Image_3,
-    Image_4,
-    Image_5,
-    Image_6,
-  ];
 
   const controls = useAnimation();
 
@@ -66,7 +44,7 @@ const FirstContainer = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            // whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05 }}
           >
             <StyledMainImage src={mainImage} alt="Logo" />
           </ImageContainer>
@@ -84,11 +62,17 @@ const FirstContainer = () => {
               color={'textSecondary'}
               style={{ fontWeight: 550, color: 'white' }}
             >
-              Elevate Social Media is your go-to agency for cutting-edge social
-              media marketing solutions. We help businesses grow and thrive
-              online with minimal effort. Elevate Social Media is your go-to
-              agency for cutting-edge social media marketing solutions. We help
-              businesses grow and thrive online with minimal effort.
+              At Influenze, we specialize in providing innovative social media
+              marketing solutions that drive growth and success for your
+              business. Our tailored strategies, combined with data-driven
+              insights, ensure that your brand stands out in a competitive
+              digital landscape.
+              <br /> <br />
+              Whether it&apos;s creating engaging content, managing your online
+              community, or executing targeted campaigns, we handle everything
+              so you can focus on what you do best. Partner with us and watch
+              your social media presence transform into a powerful engine for
+              growth with minimal effort on your part.
             </Text>
           </SubTopTextContainer>
         </SubTopContainer>
@@ -96,30 +80,9 @@ const FirstContainer = () => {
     );
   };
 
-  const renderBottomPart = () => {
-    return (
-      <SubBottomContainer>
-        <Text
-          variant={'h6'}
-          color={'#dddddd'}
-          style={{
-            fontWeight: 550,
-            alignSelf: 'center',
-          }}
-        >
-          Join us and take your brand to new heights.
-        </Text>
-      </SubBottomContainer>
-    );
-  };
-
   return (
     <MainContainer>
-      <SubContainer>
-        {renderTopPart()}
-        {renderBottomPart()}
-      </SubContainer>
-      <ImageCarousel images={imagesSrc} />
+      <SubContainer>{renderTopPart()}</SubContainer>
     </MainContainer>
   );
 };

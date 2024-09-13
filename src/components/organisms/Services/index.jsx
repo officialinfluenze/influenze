@@ -1,3 +1,5 @@
+import { useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import {
   FlexRow,
   ImageContainer,
@@ -5,6 +7,7 @@ import {
   ServiceTitle,
   Heading1,
   Heading2,
+  FlexContainer,
 } from './index.styles';
 import digitalstratergies from '../../../assets/images/Digital Strategies.svg';
 import contentcreation from '../../../assets/images/Content Creation.svg';
@@ -15,18 +18,38 @@ import payperclick from '../../../assets/images/Pay-Per-Click.svg';
 import { ServiceDescription } from './index.styles';
 import PropTypes from 'prop-types';
 
-const Services = ({ icon, title, description }) => (
-  <ServicesContainer>
-    <div
-      style={{
-        display: 'flex',
-      }}
-    >
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.2,
+      duration: 0.5,
+    },
+  }),
+  hover: {
+    y: -10,
+  },
+};
+
+const MotionServicesContainer = motion(ServicesContainer);
+
+const Services = ({ icon, title, description, index }) => (
+  <MotionServicesContainer
+    initial="hidden"
+    whileInView="visible"
+    variants={containerVariants}
+    custom={index}
+    viewport={{ once: true, amount: 0.5 }}
+    whileHover="hover"
+  >
+    <div style={{ display: 'flex' }}>
       <ImageContainer>{icon}</ImageContainer>
     </div>
     <ServiceTitle>{title}</ServiceTitle>
     <ServiceDescription>{description}</ServiceDescription>
-  </ServicesContainer>
+  </MotionServicesContainer>
 );
 
 const services = [
@@ -58,7 +81,7 @@ const services = [
     icon: (
       <img
         src={webdevelopment}
-        alt="webdevelopment"
+        alt="Web Development"
         style={{ width: '50px', height: '50px' }}
       />
     ),
@@ -82,7 +105,7 @@ const services = [
     icon: (
       <img
         src={branding}
-        alt="Branding and Marketing "
+        alt="Branding and Marketing"
         style={{ width: '50px', height: '50px' }}
       />
     ),
@@ -103,27 +126,47 @@ const services = [
       'Drive quality traffic with targeted ads on major platforms for maximizing reach.',
   },
 ];
+
 const Page = () => {
+  const tierCardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-card');
+          } else {
+            entry.target.classList.remove('animate-card');
+          }
+        });
+      },
+      { threshold: 0.35 },
+    );
+
+    const element = tierCardRef.current;
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, []);
+
   return (
     <>
       <Heading1 variant="body1">Boost Your Brand</Heading1>
       <Heading2 variant="h5" color="#dddddd">
         Innovative Social Media Marketing Solutions
       </Heading2>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: '30px',
-        }}
-      >
+      <FlexContainer ref={tierCardRef}>
         <FlexRow>
           {services.map((service, index) => (
-            <Services key={index} {...service} />
+            <Services key={index} index={index} {...service} />
           ))}
         </FlexRow>
-      </div>
+      </FlexContainer>
     </>
   );
 };

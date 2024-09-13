@@ -5,3 +5,5 @@ export { default as TwitterIcon } from './TwitterIcon';
 export { default as ExpandMoreIcon } from './ExpandMoreIcon';
 export { default as CheckCircleOutlineIcon } from './CheckCircleOutlineIcon';
 export { default as ArrowDropDown } from './ArrowDropDown';
+export {default as InstagramIcon } from './InstagramIcon';
+export {default as EmailIcon} from './EmailIcon';
