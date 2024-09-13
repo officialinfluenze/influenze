@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactMeForm from 'src/components/organisms/ContactMeForm';
 import CardSection from 'src/components/molecules/CardSection';
 import FAQ from 'src/components/organisms/FAQ';
 import FirstContainer from 'src/components/organisms/FirstContainer';
@@ -17,6 +18,7 @@ const HomeScreen: React.FC = () => {
       <Page />
       <Plans />
       <Testimonials />
+      <ContactMeForm />
       <FAQ />
       <Footer />
     </div>
