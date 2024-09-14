@@ -15,9 +15,7 @@ export const Heading2 = styled(Text)({
     fontStyle: 'normal',
     fontSize: '54px',
     color:'#dddddd',
-    textAlign: 'center',
     marginTop: '1%',
-    fontWeight: 'bold', 
     letterSpacing: '-1.5px',
     lineHeight: '110%'
 });

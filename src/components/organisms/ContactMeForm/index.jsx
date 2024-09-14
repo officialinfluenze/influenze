@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Text, Button, Tooltip } from '@influenze/ui-lib';
 import { StyledTextField, FlexContainer } from './index.styles';
