@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Text, Button, Tooltip } from '@influenze/ui-lib';
 import { StyledTextField, FlexContainer } from './index.styles';
-const ContactMeForm = () => {
+const ContactMeForm = ({ passedRef }) => {
   const [disabled, setDisabled] = useState(true);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -142,7 +143,7 @@ const ContactMeForm = () => {
     );
   };
   return (
-    <FlexContainer>
+    <FlexContainer ref={passedRef}>
       <div
         style={{
           display: 'flex',
@@ -229,6 +230,12 @@ const ContactMeForm = () => {
       </div>
     </FlexContainer>
   );
+};
+ContactMeForm.propTypes = {
+  passedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 };
 
 export default ContactMeForm;

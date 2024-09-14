@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ContactMeForm from 'src/components/organisms/ContactMeForm';
 import CardSection from 'src/components/molecules/CardSection';
 import FAQ from 'src/components/organisms/FAQ';
@@ -10,17 +10,51 @@ import Page from 'src/components/organisms/Services';
 import Testimonials from 'src/components/organisms/Testimonials';
 
 const HomeScreen: React.FC = () => {
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const serviceRef = useRef<HTMLDivElement>(null);
+  const pricingRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const handleScrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const handleScrollToService = () => {
+    serviceRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const handleScrollToPricing = () => {
+    pricingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const handleScrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <div>
-      <Header />
-      <FirstContainer />
-      <CardSection />
-      <Page />
-      <Plans />
+      <Header
+        scrollHome={handleScrollToHome}
+        scrollAbout={handleScrollToAbout}
+        scrollService={handleScrollToService}
+        scrollPricing={handleScrollToPricing}
+        scrollContact={handleScrollToContact}
+      />
+      <FirstContainer passedRef={homeRef} />
+      <CardSection passedRef={aboutRef} />
+      <Page passedRef={serviceRef} />
+      <Plans passedRef={pricingRef} />
       <Testimonials />
-      <ContactMeForm />
+      <ContactMeForm passedRef={contactRef} />
       <FAQ />
-      <Footer />
+      <Footer
+        scrollHome={handleScrollToHome}
+        scrollAbout={handleScrollToAbout}
+        scrollService={handleScrollToService}
+        scrollPricing={handleScrollToPricing}
+        scrollContact={handleScrollToContact}
+      />
     </div>
   );
 };

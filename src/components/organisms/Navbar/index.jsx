@@ -1,8 +1,14 @@
 import { AppBar, Toolbar, Button, Text } from '@influenze/ui-lib';
 import Logo from '../../../assets/images/logo-png.png';
 import { NavLinks } from './index.styles';
-
-const Header = () => {
+import PropTypes from 'prop-types';
+const Header = ({
+  scrollHome,
+  scrollAbout,
+  scrollService,
+  scrollPricing,
+  scrollContact,
+}) => {
   return (
     <AppBar
       position="fixed"
@@ -32,6 +38,7 @@ const Header = () => {
               color: 'white',
               fontWeight: 550,
             }}
+            onClick={scrollHome}
           >
             Home
           </Button>
@@ -41,6 +48,7 @@ const Header = () => {
               fontWeight: 550,
               color: 'white',
             }}
+            onClick={scrollAbout}
           >
             About
           </Button>
@@ -50,6 +58,7 @@ const Header = () => {
               fontWeight: 550,
               color: 'white',
             }}
+            onClick={scrollService}
           >
             Services
           </Button>
@@ -59,8 +68,9 @@ const Header = () => {
               fontWeight: 550,
               color: 'white',
             }}
+            onClick={scrollPricing}
           >
-            Blog
+            Pricing
           </Button>
           <Button
             sx={{
@@ -68,6 +78,7 @@ const Header = () => {
               fontWeight: 550,
               color: 'white',
             }}
+            onClick={scrollContact}
           >
             Contact
           </Button>
@@ -78,3 +89,10 @@ const Header = () => {
 };
 
 export default Header;
+Header.propTypes = {
+  scrollHome: PropTypes.func.isRequired,
+  scrollAbout: PropTypes.func.isRequired,
+  scrollService: PropTypes.func.isRequired,
+  scrollPricing: PropTypes.func.isRequired,
+  scrollContact: PropTypes.func.isRequired,
+};

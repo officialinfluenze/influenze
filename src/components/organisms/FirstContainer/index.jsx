@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Text } from '@influenze/ui-lib';
 import { motion, useAnimation } from 'framer-motion';
+import PropTypes from 'prop-types';
 import {
   MainContainer,
   SubContainer,
@@ -11,7 +12,7 @@ import {
 } from './index.styles';
 import headerimg from '../../../assets/images/headerimg.png';
 
-const FirstContainer = () => {
+const FirstContainer = ({ passedRef }) => {
   const mainImage = headerimg;
 
   const controls = useAnimation();
@@ -81,10 +82,16 @@ const FirstContainer = () => {
   };
 
   return (
-    <MainContainer>
+    <MainContainer ref={passedRef}>
       <SubContainer>{renderTopPart()}</SubContainer>
     </MainContainer>
   );
 };
 
 export default FirstContainer;
+FirstContainer.propTypes = {
+  passedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
+};

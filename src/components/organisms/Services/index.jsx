@@ -127,7 +127,7 @@ const services = [
   },
 ];
 
-const Page = () => {
+const Page = ({ passedRef }) => {
   const tierCardRef = useRef(null);
 
   useEffect(() => {
@@ -155,7 +155,7 @@ const Page = () => {
   }, []);
 
   return (
-    <>
+    <div ref={passedRef} style={{ display: 'flex', flexDirection: 'column' }}>
       <Heading1 variant="body1">Boost Your Brand</Heading1>
       <Heading2 variant="h5" color="#dddddd">
         Innovative Social Media Marketing Solutions
@@ -167,7 +167,7 @@ const Page = () => {
           ))}
         </FlexRow>
       </FlexContainer>
-    </>
+    </div>
   );
 };
 
@@ -175,6 +175,12 @@ Services.propTypes = {
   icon: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  index: PropTypes.number,
 };
-
+Page.propTypes = {
+  passedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
+};
 export default Page;

@@ -8,6 +8,7 @@ import {
   Heading,
   SubHeading,
 } from './index.styles';
+import PropTypes from 'prop-types';
 
 const data = [
   {
@@ -68,9 +69,10 @@ const data = [
   },
 ];
 
-const CardSection = () => {
+const CardSection = ({ passedRef }) => {
   return (
     <div
+      ref={passedRef}
       style={{
         backgroundImage: `radial-gradient(at 29% 62%, hsla(239,58%,15%,1) 0px, transparent 50%),
 radial-gradient(at 100% 0%, hsla(27,0%,0%,1) 0px, transparent 50%),
@@ -126,3 +128,10 @@ radial-gradient(at 0% 50%, hsla(0,0%,0%,0.44) 0px, transparent 50%)`,
 };
 
 export default CardSection;
+
+CardSection.propTypes = {
+  passedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
+};
