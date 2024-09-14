@@ -37,9 +37,9 @@ export const FlexContainer = styled('div')({
   padding: '14% 0% 14% 0%',
   justifyContent: 'space-around',
 
-  background: 'linear-gradient(138deg, #0f1960, #5364d9, #e86116)',
+  background: 'linear-gradient(121deg, #141767, #444ad7, #46498d)', 
   backgroundSize: '600% 600%',
-  animation: 'AnimationName 12s ease infinite',
+  animation: 'AnimationName 10s ease infinite',
 
   maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
   WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)',
@@ -51,9 +51,9 @@ export const FlexContainer = styled('div')({
   },
 
   '@keyframes AnimationName': {
-    '0%': { backgroundPosition: '20% 0%' },
-    '50%': { backgroundPosition: '81% 100%' },
-    '100%': { backgroundPosition: '20% 0%' },
+    '0%': { backgroundPosition: '27% 0%' }, 
+    '50%': { backgroundPosition: '74% 100%' },
+    '100%': { backgroundPosition: '27% 0%' },
   },
 });
 

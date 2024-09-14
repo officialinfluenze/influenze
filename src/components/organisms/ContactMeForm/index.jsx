@@ -73,7 +73,15 @@ const ContactMeForm = () => {
             paddingLeft: '20%',
           }}
         >
-          <Text variant="h2" color="white">
+          <Text
+            variant="h2"
+            style={{
+              color: '#dddddd',
+              alignSelf: 'center',
+              fontWeight: 600,
+              margin: '1%',
+            }}
+          >
             Just say Hello!
           </Text>
           <div
@@ -127,11 +135,12 @@ const ContactMeForm = () => {
           <Tooltip title={disabled ? 'Fill in all the details' : 'Submit'}>
             <Button
               type="submit"
-              variant="contained"
+              variant="outlined"
               style={{
                 color: '#fff',
-                marginTop: '40px',
                 width: '16%',
+                borderRadius: '12px',
+                borderColor: '#fff',
               }}
             >
               Submit
@@ -207,6 +216,7 @@ const ContactMeForm = () => {
               color: '#dddddd',
               alignSelf: 'center',
               fontWeight: 600,
+              margin: '2%',
             }}
           >
             Contact Us
@@ -219,7 +229,15 @@ const ContactMeForm = () => {
             justifyContent: 'center',
           }}
         >
-          <Text style={{ color: '#dddddd', width: '80%' }}>
+          <Text
+            style={{
+              color: '#dddddd',
+              width: '80%',
+              textAlign: 'center',
+              margin: '2%',
+              fontFamily: 'poppins, sans-serif',
+            }}
+          >
             We are here to help you! Please fill in the form below with your
             contact details and a brief description of your inquiry or issue.
             The more information you provide, the better we can assist you. Rest

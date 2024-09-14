@@ -15,7 +15,7 @@ export const CardContainer = styled('div')({
   gap: '20px', 
   marginBottom: '25px',
   overflow: 'hidden', 
-  animation: `${slide} 200s linear infinite`,
+  animation: `${slide} 300s linear infinite`,
 });
   
 export const Card = styled('div')({

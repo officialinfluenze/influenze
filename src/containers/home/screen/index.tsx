@@ -7,7 +7,7 @@ import Footer from 'src/components/organisms/Footer';
 import Header from 'src/components/organisms/Navbar';
 import Plans from 'src/components/organisms/Plans';
 import Page from 'src/components/organisms/Services';
-import Testimonials from 'src/components/organisms/Testimonials';
+// import Testimonials from 'src/components/organisms/Testimonials';
 
 const HomeScreen: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const HomeScreen: React.FC = () => {
       <CardSection />
       <Page />
       <Plans />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ContactMeForm />
       <FAQ />
       <Footer />

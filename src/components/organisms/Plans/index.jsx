@@ -124,8 +124,8 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
         <FlexContainer ref={tierCardRef}>
           <TierPlanCard
             planTitle="Starter"
-            price="₹4"
-            monthlyCost="₹99/month"
+            price="₹9,999"
+            monthlyCost="/month"
             description="Ideal for personal use or small businesses"
             benefits={Tier1}
             buttonText="Start Now"
@@ -133,8 +133,8 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
           />
           <TierPlanCard
             planTitle="Growth"
-            price="₹12"
-            monthlyCost="₹299/month"
+            price="₹39,999"
+            monthlyCost="/month"
             description="Ideal for small teams and businesses"
             benefits={Tier2}
             buttonText="Get Started"
@@ -142,8 +142,8 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
           />
           <TierPlanCard
             planTitle="Expert"
-            price="₹12"
-            monthlyCost="₹299/month"
+            price="₹69,999"
+            monthlyCost="/month"
             description="Ideal for large businesses or organizations"
             benefits={Tier3}
             buttonText="Get Started"

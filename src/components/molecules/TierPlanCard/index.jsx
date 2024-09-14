@@ -10,7 +10,7 @@ import {
   StyledHr,
   PlanTitle,
   StyledButton,
-  CardActions
+  CardActions,
 } from './index.styles';
 
 const PlanBenefits = ({ icon, description }) => (
@@ -37,7 +37,13 @@ const TierPlanCard = ({
         </PlanTitle>
       </PlanTitleContainer>
       <SubFlexContainer>
-        <Text variant="h4" sx={{ fontWeight: 'bold', color: 'white' }}>
+        <Text
+          variant="h4"
+          sx={{
+            fontWeight: 'bold',
+            color: 'white',
+          }}
+        >
           {price}
         </Text>
         <span style={{ alignSelf: 'center', color: 'white' }}>
