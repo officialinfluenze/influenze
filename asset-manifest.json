@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/influenze/static/css/main.bc63da74.css",
-    "main.js": "/influenze/static/js/main.a6a220e7.js",
+    "main.js": "/influenze/static/js/main.9ab4bd52.js",
     "static/media/headerimg.png": "/influenze/static/media/headerimg.f4f5db6332582989f7f1.png",
     "static/media/logo-png.png": "/influenze/static/media/logo-png.8d28b16a34ff9a8d19e6.png",
     "static/media/Branding and Marketing.svg": "/influenze/static/media/Branding and Marketing.d7c575f0c2c2485a36e075f6108b96ba.svg",
@@ -12,10 +12,10 @@
     "static/media/Content Creation.svg": "/influenze/static/media/Content Creation.e6ba9733b8441d59358f3bc351e095dc.svg",
     "index.html": "/influenze/index.html",
     "main.bc63da74.css.map": "/influenze/static/css/main.bc63da74.css.map",
-    "main.a6a220e7.js.map": "/influenze/static/js/main.a6a220e7.js.map"
+    "main.9ab4bd52.js.map": "/influenze/static/js/main.9ab4bd52.js.map"
   },
   "entrypoints": [
     "static/css/main.bc63da74.css",
-    "static/js/main.a6a220e7.js"
+    "static/js/main.9ab4bd52.js"
   ]
 }
