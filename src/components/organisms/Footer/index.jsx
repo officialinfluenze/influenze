@@ -67,10 +67,22 @@ const Footer = () => {
             Connect with Us
           </Text>
           <div style={{ display: 'flex' }}>
-            <Button sx={{ color: 'white', minWidth: '10px' }}>
+            <Button
+              sx={{ color: 'white', minWidth: '10px' }}
+              onClick={() => {
+                window.open(
+                  'https://www.instagram.com/influenze.in?igsh=em56cXFodnUwa290',
+                );
+              }}
+            >
               <InstagramIcon />
             </Button>
-            <Button sx={{ color: 'white', minWidth: '10px' }}>
+            <Button
+              sx={{ color: 'white', minWidth: '10px' }}
+              onClick={() => {
+                window.open('mailto:officialinfluenze@gmail.com');
+              }}
+            >
               <EmailIcon />
             </Button>
           </div>
