@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { Icons } from '@influenze/ui-lib';
 import { Heading1, Heading2, FlexContainer } from './index.styles';
+import PropTypes from 'prop-types';
+
 import TierPlanCard from 'src/components/molecules/TierPlanCard';
 const CheckCircleOutlineIcon = Icons.CheckCircleOutlineIcon;
 
@@ -78,7 +80,7 @@ const Tier3 = [
   },
 ];
 
-const Plans = () => {
+const Plans = ({ passedRef }) => {
   const tierCardRef = useRef(null);
 
   useEffect(() => {
@@ -106,7 +108,7 @@ const Plans = () => {
   }, []);
 
   return (
-    <>
+    <div ref={passedRef} style={{ display: 'flex', flexDirection: 'column' }}>
       <Heading1 variant="h2">Affordable Plans:</Heading1>
       <Heading2 variant="h2">
         Choose the perfect plan tailored for your business needs
@@ -151,8 +153,15 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
           />
         </FlexContainer>
       </div>
-    </>
+    </div>
   );
 };
 
 export default Plans;
+
+Plans.propTypes = {
+  passedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
+};

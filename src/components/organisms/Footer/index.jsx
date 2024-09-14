@@ -10,10 +10,17 @@ import {
   SubFlexContainer4,
   FooterContainer,
 } from './index.styles';
+import PropTypes from 'prop-types';
 
 const { InstagramIcon, EmailIcon } = Icons;
 
-const Footer = () => {
+const Footer = ({
+  scrollHome,
+  scrollAbout,
+  scrollService,
+  scrollPricing,
+  scrollContact,
+}) => {
   return (
     <FooterContainer>
       <MainContainer>
@@ -48,11 +55,11 @@ const Footer = () => {
             Information
           </Text>
           <NavLinks>
-            <StyledButton>Home</StyledButton>
-            <StyledButton>About</StyledButton>
-            <StyledButton>Services</StyledButton>
-            <StyledButton>Blog</StyledButton>
-            <StyledButton>Contact</StyledButton>
+            <StyledButton onClick={scrollHome}>Home</StyledButton>
+            <StyledButton onClick={scrollAbout}>About</StyledButton>
+            <StyledButton onClick={scrollService}>Services</StyledButton>
+            <StyledButton onClick={scrollPricing}>Pricing</StyledButton>
+            <StyledButton onClick={scrollContact}>Contact</StyledButton>
           </NavLinks>
         </SubFlexContainer3>
         <SubFlexContainer4>
@@ -105,3 +112,11 @@ const Footer = () => {
   );
 };
 export default Footer;
+
+Footer.propTypes = {
+  scrollHome: PropTypes.func.isRequired,
+  scrollAbout: PropTypes.func.isRequired,
+  scrollService: PropTypes.func.isRequired,
+  scrollPricing: PropTypes.func.isRequired,
+  scrollContact: PropTypes.func.isRequired,
+};
