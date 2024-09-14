@@ -1,4 +1,5 @@
 {
+  "homepage": "https://officialinfluenz.github.io/influenze",
   "name": "influenze",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +17,7 @@
     "@types/react-dom": "^18.3.0",
     "ajv": "^8.17.1",
     "framer-motion": "^11.5.4",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -29,7 +31,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
