@@ -47,7 +47,7 @@ const FirstContainer = ({ passedRef }) => {
             transition={{ duration: 1, ease: 'easeOut' }}
             whileHover={{ scale: 1.05 }}
           >
-            <StyledMainImage src={mainImage} alt="Logo" />
+            <StyledMainImage src={mainImage} alt="Logo" loading="lazy" />
           </ImageContainer>
 
           <SubTopTextContainer
