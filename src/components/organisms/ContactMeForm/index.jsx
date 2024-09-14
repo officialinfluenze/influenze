@@ -71,7 +71,6 @@ const ContactMeForm = ({ passedRef }) => {
             flexDirection: 'column',
             width: '100%',
             minWidth: '500px',
-            paddingLeft: '20%',
           }}
         >
           <Text
@@ -159,10 +158,8 @@ const ContactMeForm = ({ passedRef }) => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'flex-start',
-          padding: '0px 0px 0px 0px',
           gap: '10px',
-        }}
-      >
+        }}>
         {submissionStatus === 'success' ? (
           <div
             style={{

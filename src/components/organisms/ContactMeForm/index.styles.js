@@ -32,9 +32,9 @@ export const FlexContainer = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   gap: '10%',
-  width: '100%',
+  width: '80%',
   marginTop: '50px',
-  padding: '14% 0% 14% 0%',
+  padding: '14% 10% 14% 10%',
   justifyContent: 'space-around',
 
   background: 'linear-gradient(121deg, #141767, #444ad7, #46498d)', 
