@@ -8,7 +8,6 @@ import {
   SubFlexContainer2,
   SubFlexContainer3,
   SubFlexContainer4,
-  FooterContainer,
 } from './index.styles';
 import PropTypes from 'prop-types';
 
@@ -22,7 +21,7 @@ const Footer = ({
   scrollContact,
 }) => {
   return (
-    <FooterContainer>
+    <>
       <MainContainer>
         <SubFlexContainer1>
           <img src={Logo} alt="Logo" style={{ width: 100, height: 100 }} />
@@ -108,7 +107,7 @@ const Footer = ({
           © 2024 Influenze. All rights reserved.
         </Text>
       </div>
-    </FooterContainer>
+    </>
   );
 };
 export default Footer;

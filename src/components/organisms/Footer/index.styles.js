@@ -56,13 +56,3 @@ export const StyledButton = styled(Button)({
   justifyContent: 'flex-start',
 });
 
-export const FooterContainer = styled('div')({
-  backgroundImage:`radial-gradient(at 18% 94%, hsla(239,58%,15%,1) 0px, transparent 50%),
-radial-gradient(at 100% 0%, hsla(27,0%,0%,1) 0px, transparent 50%),
-radial-gradient(at 53% 54%, hsla(189,0%,0%,1) 0px, transparent 50%),
-radial-gradient(at 53% 97%, hsla(240,50%,25%,1) 0px, transparent 50%),
-radial-gradient(at 83% 95%, hsla(239,34%,22%,1) 0px, transparent 50%),
-radial-gradient(at 100% 100%, hsla(340,0%,0%,1) 0px, transparent 50%),
-radial-gradient(at 13% 9%, hsla(0,0%,0%,1) 0px, transparent 50%),
-radial-gradient(at 0% 50%, hsla(0,0%,0%,0.44) 0px, transparent 50%);`
-})
