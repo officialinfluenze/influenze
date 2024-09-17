@@ -107,6 +107,8 @@ const Footer = ({
           © 2024 Influenze. All rights reserved.
         </Text>
       </div>
+      <div>this is a test</div>
+      {/* remove this line */}
     </>
   );
 };
