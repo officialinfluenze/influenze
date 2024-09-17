@@ -119,3 +119,5 @@ Footer.propTypes = {
   scrollPricing: PropTypes.func.isRequired,
   scrollContact: PropTypes.func.isRequired,
 };
+
+//footer fix
