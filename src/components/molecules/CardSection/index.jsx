@@ -102,7 +102,7 @@ const CardSection = ({ passedRef }) => {
           </SubHeading>
         </div>
         <CardContainer>
-          {[...data, ...data, ...data, ...data, , ...data, , ...data].map(
+          {[...data, ...data, ...data, ...data, ...data, , ...data].map(
             (item, index) => (
               <Card key={index}>
                 <div

@@ -28,6 +28,7 @@ const TierPlanCard = ({
   benefits,
   buttonText,
   buttonVariant,
+  scrollToContact,
 }) => (
   <StyledCard>
     <CardContent>
@@ -59,7 +60,9 @@ const TierPlanCard = ({
       </div>
     </CardContent>
     <CardActions>
-      <StyledButton variant={buttonVariant}>{buttonText}</StyledButton>
+      <StyledButton variant={buttonVariant} onClick={scrollToContact}>
+        {buttonText}
+      </StyledButton>
     </CardActions>
   </StyledCard>
 );
@@ -77,6 +80,7 @@ TierPlanCard.propTypes = {
   ).isRequired,
   buttonText: PropTypes.string.isRequired,
   buttonVariant: PropTypes.string.isRequired,
+  scrollToContact: PropTypes.func.isRequired,
 };
 
 PlanBenefits.propTypes = {

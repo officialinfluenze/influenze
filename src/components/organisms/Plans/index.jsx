@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Icons } from '@influenze/ui-lib';
 import { Heading1, Heading2, FlexContainer } from './index.styles';
-import PropTypes from 'prop-types';
-
 import TierPlanCard from 'src/components/molecules/TierPlanCard';
+
 const CheckCircleOutlineIcon = Icons.CheckCircleOutlineIcon;
 
 const Tier1 = [
@@ -32,7 +32,7 @@ const Tier1 = [
 const Tier2 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Multi-platform ',
+    description: 'Multi-platform',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -46,7 +46,6 @@ const Tier2 = [
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Search engine optimization',
   },
-
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
     description: 'Pay per click',
@@ -60,7 +59,7 @@ const Tier2 = [
 const Tier3 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Everyting in Growth plan',
+    description: 'Everything in Growth plan',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -80,8 +79,12 @@ const Tier3 = [
   },
 ];
 
-const Plans = ({ passedRef }) => {
+const Plans = ({ contactRef }) => {
   const tierCardRef = useRef(null);
+
+  const handleScrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,7 +111,7 @@ const Plans = ({ passedRef }) => {
   }, []);
 
   return (
-    <div ref={passedRef} style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Heading1 variant="h2">Affordable Plans:</Heading1>
       <Heading2 variant="h2">
         Choose the perfect plan tailored for your business needs
@@ -116,11 +119,11 @@ const Plans = ({ passedRef }) => {
       <div
         style={{
           backgroundImage: `radial-gradient(at 61% 26%, hsla(168,0%,0%,1) 0px, transparent 50%),
-radial-gradient(at 81% 43%, hsla(240,79%,28%,0.76) 0px, transparent 50%),
-radial-gradient(at 0% 15%, hsla(308,0%,0%,0.73) 0px, transparent 50%),
-radial-gradient(at 46% 59%, hsla(344,0%,0%,0.75) 0px, transparent 50%),
-radial-gradient(at 58% 67%, hsla(240,75%,18%,0.82) 0px, transparent 50%),
-radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
+            radial-gradient(at 81% 43%, hsla(240,79%,28%,0.76) 0px, transparent 50%),
+            radial-gradient(at 0% 15%, hsla(308,0%,0%,0.73) 0px, transparent 50%),
+            radial-gradient(at 46% 59%, hsla(344,0%,0%,0.75) 0px, transparent 50%),
+            radial-gradient(at 58% 67%, hsla(240,75%,18%,0.82) 0px, transparent 50%),
+            radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
         }}
       >
         <FlexContainer ref={tierCardRef}>
@@ -130,8 +133,9 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
             monthlyCost="/month"
             description="Ideal for personal use or small businesses"
             benefits={Tier1}
-            buttonText="Start Now"
+            buttonText="Get Started"
             buttonVariant="contained"
+            scrollToContact={handleScrollToContact}
           />
           <TierPlanCard
             planTitle="Growth"
@@ -141,6 +145,7 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
             benefits={Tier2}
             buttonText="Get Started"
             buttonVariant="contained"
+            scrollToContact={handleScrollToContact}
           />
           <TierPlanCard
             planTitle="Expert"
@@ -150,6 +155,7 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
             benefits={Tier3}
             buttonText="Get Started"
             buttonVariant="contained"
+            scrollToContact={handleScrollToContact}
           />
         </FlexContainer>
       </div>
@@ -157,11 +163,15 @@ radial-gradient(at 27% 40%, hsla(258,23%,34%,1) 0px, transparent 50%)`,
   );
 };
 
-export default Plans;
-
 Plans.propTypes = {
   passedRef: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  ]),
+  ]).isRequired,
+  contactRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };
+
+export default Plans;

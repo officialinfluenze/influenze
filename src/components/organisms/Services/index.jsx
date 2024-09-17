@@ -33,7 +33,7 @@ const containerVariants = {
   },
 };
 
-const MotionServicesContainer = motion(ServicesContainer);
+const MotionServicesContainer = motion.create(ServicesContainer);
 
 const Services = ({ icon, title, description, index }) => (
   <MotionServicesContainer

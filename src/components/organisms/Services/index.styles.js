@@ -22,7 +22,6 @@ export const ImageContainer = styled('div')(({ theme }) => ({
   }));
 
 export const ServicesContainer = styled('div')({
-    minHeight:'360px',
     maxHeight:'360px',
     minWidth:'350px',
     maxWidth:'350px',

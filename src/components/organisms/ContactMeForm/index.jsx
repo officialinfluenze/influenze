@@ -122,7 +122,6 @@ const ContactMeForm = ({ passedRef }) => {
           />
           <StyledTextField
             name="entry.839337160"
-            mutiple
             label="message"
             value={message}
             multiline
@@ -159,7 +158,8 @@ const ContactMeForm = ({ passedRef }) => {
           justifyContent: 'center',
           alignItems: 'flex-start',
           gap: '10px',
-        }}>
+        }}
+      >
         {submissionStatus === 'success' ? (
           <div
             style={{

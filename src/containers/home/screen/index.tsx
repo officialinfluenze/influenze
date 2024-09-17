@@ -44,7 +44,7 @@ const HomeScreen: React.FC = () => {
       <FirstContainer passedRef={homeRef} />
       <CardSection passedRef={aboutRef} />
       <Page passedRef={serviceRef} />
-      <Plans passedRef={pricingRef} />
+      <Plans passedRef={pricingRef} contactRef={contactRef} />
       {/* <Testimonials /> */}
       <ContactMeForm passedRef={contactRef} />
       <FAQ />
