@@ -10,7 +10,7 @@ const ExpandMoreIcon = Icons.ExpandMoreIcon;
 const FAQAccordionItem = ({ title, content }) => {
   return (
     <Accordion
-      square={false}
+      square
       sx={{
         borderRadius: '10px',
         BorderAllRounded: 'true',
