@@ -1,125 +1,123 @@
-import { Button, Text, Icons } from '@influenze/ui-lib';
-import Logo from '../../../assets/images/logo-png.png';
-import {
-  MainContainer,
-  NavLinks,
-  StyledButton,
-  SubFlexContainer1,
-  SubFlexContainer2,
-  SubFlexContainer3,
-  SubFlexContainer4,
-} from './index.styles';
-import PropTypes from 'prop-types';
+  import { Button, Text, Icons } from '@influenze/ui-lib';
+  import Logo from '../../../assets/images/logo-png.png';
+  import {
+    MainContainer,
+    NavLinks,
+    StyledButton,
+    SubFlexContainer1,
+    SubFlexContainer2,
+    SubFlexContainer3,
+    SubFlexContainer4,
+    StyledText
+  } from './index.styles';
+  import PropTypes from 'prop-types';
 
-const { InstagramIcon, EmailIcon } = Icons;
+  const { InstagramIcon, EmailIcon } = Icons;
 
-const Footer = ({
-  scrollHome,
-  scrollAbout,
-  scrollService,
-  scrollPricing,
-  scrollContact,
-}) => {
-  return (
-    <>
-      <MainContainer>
-        <SubFlexContainer1>
-          <img src={Logo} alt="Logo" style={{ width: 100, height: 100 }} />
+  const Footer = ({
+    scrollHome,
+    scrollAbout,
+    scrollService,
+    scrollPricing,
+    scrollContact,
+  }) => {
+    return (
+      <>
+        <MainContainer>
+          <SubFlexContainer1>
+            <img src={Logo} alt="Logo" style={{ width: 100, height: 100 }} />
+            <Text
+              variant="h6"
+              style={{
+                color: 'white',
+                alignSelf: 'center',
+                marginLeft: '30px',
+                marginTop: '10px',
+              }}
+            >
+              Influenze
+            </Text>
+          </SubFlexContainer1>
+          <SubFlexContainer2>
+            <StyledText variant="h5">
+              About
+            </StyledText>
+            <Text
+              style={{ color: 'white', alignSelf: 'center', textWrap: 'pretty' }}
+            >
+              Influenze is a leading digital marketing agency dedicated to helping
+              businesses grow and thrive online with innovative strategies.
+              Elevate your brand with Influenze today!
+            </Text>
+          </SubFlexContainer2>
+          <SubFlexContainer3>
+            <Text variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
+              Information
+            </Text>
+            <NavLinks>
+              <StyledButton onClick={scrollHome}>Home</StyledButton>
+              <StyledButton onClick={scrollAbout}>About</StyledButton>
+              <StyledButton onClick={scrollService}>Services</StyledButton>
+              <StyledButton onClick={scrollPricing}>Pricing</StyledButton>
+              <StyledButton onClick={scrollContact}>Contact</StyledButton>
+            </NavLinks>
+          </SubFlexContainer3>
+          <SubFlexContainer4>
+            <Text
+              variant="h5"
+              style={{
+                color: 'white',
+                alignSelf: 'center',
+                marginBottom: '10px',
+              }}
+            >
+              Connect with Us
+            </Text>
+            <div style={{ display: 'flex' }}>
+              <Button
+                sx={{ color: 'white', minWidth: '10px' }}
+                onClick={() => {
+                  window.open(
+                    'https://www.instagram.com/influenze.in?igsh=em56cXFodnUwa290',
+                  );
+                }}
+              >
+                <InstagramIcon />
+              </Button>
+              <Button
+                sx={{ color: 'white', minWidth: '10px' }}
+                onClick={() => {
+                  window.open('mailto:officialinfluenze@gmail.com');
+                }}
+              >
+                <EmailIcon />
+              </Button>
+            </div>
+          </SubFlexContainer4>
+        </MainContainer>
+        <div style={{ marginLeft: '200px' }}>
           <Text
-            variant="h6"
+            variant="subtitle2"
             style={{
               color: 'white',
               alignSelf: 'center',
-              marginLeft: '30px',
-              marginTop: '10px',
+              marginLeft: '10px',
+              fontSize: 'small',
             }}
           >
-            Influenze
+            © 2024 Influenze. All rights reserved.
           </Text>
-        </SubFlexContainer1>
-        <SubFlexContainer2>
-          <Text variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
-            About
-          </Text>
-          <Text
-            style={{ color: 'white', alignSelf: 'center', textWrap: 'pretty' }}
-          >
-            Influenze is a leading digital marketing agency dedicated to helping
-            businesses grow and thrive online with innovative strategies.
-            Elevate your brand with Influenze today!
-          </Text>
-        </SubFlexContainer2>
-        <SubFlexContainer3>
-          <Text variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
-            Information
-          </Text>
-          <NavLinks>
-            <StyledButton onClick={scrollHome}>Home</StyledButton>
-            <StyledButton onClick={scrollAbout}>About</StyledButton>
-            <StyledButton onClick={scrollService}>Services</StyledButton>
-            <StyledButton onClick={scrollPricing}>Pricing</StyledButton>
-            <StyledButton onClick={scrollContact}>Contact</StyledButton>
-          </NavLinks>
-        </SubFlexContainer3>
-        <SubFlexContainer4>
-          <Text
-            variant="h5"
-            style={{
-              color: 'white',
-              alignSelf: 'center',
-              marginBottom: '10px',
-            }}
-          >
-            Connect with Us
-          </Text>
-          <div style={{ display: 'flex' }}>
-            <Button
-              sx={{ color: 'white', minWidth: '10px' }}
-              onClick={() => {
-                window.open(
-                  'https://www.instagram.com/influenze.in?igsh=em56cXFodnUwa290',
-                );
-              }}
-            >
-              <InstagramIcon />
-            </Button>
-            <Button
-              sx={{ color: 'white', minWidth: '10px' }}
-              onClick={() => {
-                window.open('mailto:officialinfluenze@gmail.com');
-              }}
-            >
-              <EmailIcon />
-            </Button>
-          </div>
-        </SubFlexContainer4>
-      </MainContainer>
-      <div style={{ marginLeft: '150px' }}>
-        <Text
-          variant="subtitle2"
-          style={{
-            color: 'white',
-            alignSelf: 'center',
-            marginLeft: '10px',
-            fontSize: 'small',
-          }}
-        >
-          © 2024 Influenze. All rights reserved.
-        </Text>
-      </div>
-      <div>this is a test</div>
-      {/* remove this line */}
-    </>
-  );
-};
-export default Footer;
+        </div>
+      </>
+    );
+  };
+  export default Footer;
 
-Footer.propTypes = {
-  scrollHome: PropTypes.func.isRequired,
-  scrollAbout: PropTypes.func.isRequired,
-  scrollService: PropTypes.func.isRequired,
-  scrollPricing: PropTypes.func.isRequired,
-  scrollContact: PropTypes.func.isRequired,
-};
+  Footer.propTypes = {
+    scrollHome: PropTypes.func.isRequired,
+    scrollAbout: PropTypes.func.isRequired,
+    scrollService: PropTypes.func.isRequired,
+    scrollPricing: PropTypes.func.isRequired,
+    scrollContact: PropTypes.func.isRequired,
+  };
 
-//footer fix

@@ -8,7 +8,17 @@ const FAQ = () => {
       <Heading2 variant="h5">Commonly asked questions</Heading2>
       <FAQAccordionItem
         title="What services do you offer?"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+        content={
+          <>
+            <p>1. <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}> Digital Strategies</span> : Unique and strategic plans to drive digital growth effectively.</p>
+            <p>2. <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}> Content Creation</span> : Craft impactful, engaging, and audience-focused digital content.</p>
+            <p>3. <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}> Web Development</span> : Create responsive, dynamic, and engaging websites for all devices.</p>
+            <p>4. <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}> Analytics & SEO</span> : Boost online visibility with expert SEO and data-driven insights.</p>
+            <p>5. <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}> Branding and Marketing</span> : Build, enhance, and promote a unique brand identity for your business.</p>
+            <p>6. <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}> Pay-Per-Click (PPC)</span> : Drive quality traffic with targeted ads on major platforms for maximizing reach.</p>
+          </>
+        }
+        
       />
       <FAQAccordionItem
         title="How do I get started?"

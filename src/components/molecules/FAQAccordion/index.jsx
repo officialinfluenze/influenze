@@ -16,7 +16,7 @@ const FAQAccordionItem = ({ title, content }) => {
         BorderAllRounded: 'true',
         margin: '4px',
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
-        width: '900px',
+        width: '70%',
         color: 'white',
         '&:before': {
           display: 'none',
