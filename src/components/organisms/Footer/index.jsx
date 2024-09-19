@@ -8,7 +8,10 @@
     SubFlexContainer2,
     SubFlexContainer3,
     SubFlexContainer4,
-    StyledText
+    StyledText,
+    FooterStyledText,
+    FooterContainer,
+    LogoImage
   } from './index.styles';
   import PropTypes from 'prop-types';
 
@@ -24,20 +27,12 @@
     return (
       <>
         <MainContainer>
-          <SubFlexContainer1>
-            <img src={Logo} alt="Logo" style={{ width: 100, height: 100 }} />
-            <Text
-              variant="h6"
-              style={{
-                color: 'white',
-                alignSelf: 'center',
-                marginLeft: '30px',
-                marginTop: '10px',
-              }}
-            >
-              Influenze
-            </Text>
-          </SubFlexContainer1>
+        <SubFlexContainer1>
+          <LogoImage src={Logo} alt="Logo" />
+          <StyledText variant="h6">
+            Influenze
+          </StyledText>
+        </SubFlexContainer1>
           <SubFlexContainer2>
             <StyledText variant="h5">
               About
@@ -95,19 +90,11 @@
             </div>
           </SubFlexContainer4>
         </MainContainer>
-        <div style={{ marginLeft: '200px' }}>
-          <Text
-            variant="subtitle2"
-            style={{
-              color: 'white',
-              alignSelf: 'center',
-              marginLeft: '10px',
-              fontSize: 'small',
-            }}
-          >
+        <FooterContainer>
+          <FooterStyledText variant="subtitle2">
             © 2024 Influenze. All rights reserved.
-          </Text>
-        </div>
+          </FooterStyledText>
+        </FooterContainer>
       </>
     );
   };
