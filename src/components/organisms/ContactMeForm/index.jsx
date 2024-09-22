@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Text, Button, Tooltip } from '@influenze/ui-lib';
+import {
+  Text,
+  Button,
+  Tooltip,
+  CircularProgress,
+  Snackbar,
+  Alert,
+} from '@influenze/ui-lib';
 import { StyledTextField, FlexContainer } from './index.styles';
 const ContactMeForm = ({ passedRef }) => {
   const [disabled, setDisabled] = useState(true);
@@ -11,6 +18,7 @@ const ContactMeForm = ({ passedRef }) => {
   const [submissionStatus, setSubmissionStatus] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [snackBarStatus, setSnackBarStatus] = useState(false);
 
   useEffect(() => {
     if (name === '' || phone === '' || email === '' || message === '') {
@@ -42,8 +50,10 @@ const ContactMeForm = ({ passedRef }) => {
       );
       if (response.ok || response.status === 0) {
         setSubmissionStatus('success');
+        setSnackBarStatus(true);
       } else {
         setSubmissionStatus('failure');
+        setSnackBarStatus(true);
       }
       setName('');
       setPhone('');
@@ -59,6 +69,26 @@ const ContactMeForm = ({ passedRef }) => {
     }
   };
 
+  const renderSnackBar = () => {
+    return (
+      <Snackbar
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        open={snackBarStatus}
+        onClose={() => setSnackBarStatus(false)}
+        autoHideDuration={6000}
+      >
+        <Alert
+          severity={submissionStatus === 'success' ? 'success' : 'warning'}
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {submissionStatus === 'success'
+            ? 'Details Submitted Successfully'
+            : 'Details Submission Failed'}
+        </Alert>
+      </Snackbar>
+    );
+  };
   const renderForm = () => {
     return (
       <form
@@ -167,7 +197,7 @@ const ContactMeForm = ({ passedRef }) => {
               gap: '20px',
             }}
           >
-            <Text style={{ color: 'green' }}>Submitted Successfully</Text>
+            {renderSnackBar()}
           </div>
         ) : (
           (submissionStatus === 'failure' || error) && (
@@ -177,7 +207,7 @@ const ContactMeForm = ({ passedRef }) => {
                 gap: '20px',
               }}
             >
-              <Text style={{ color: 'red' }}>Submission Failed</Text>
+              {renderSnackBar()}
             </div>
           )
         )}
@@ -192,7 +222,20 @@ const ContactMeForm = ({ passedRef }) => {
             minHeight: 'auto',
           }}
         >
-          {loading ? <Text>Submitting.....</Text> : renderForm()}
+          {loading ? (
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100%',
+                minWidth: '500px',
+              }}
+            >
+              <CircularProgress size={50} style={{ alignSelf: 'center' }} />
+            </div>
+          ) : (
+            renderForm()
+          )}
         </div>
       </div>
       <div

@@ -16,6 +16,8 @@ export { default as AccordionSummary } from './AccordionSummary';
 export { default as AccordionDetails } from './AccordionDetails';
 export { default as Avatar } from './Avatar';
 export { default as Tooltip } from './Tooltip';
-
+export { default as CircularProgress } from './CircularProgress';
+export { default as Snackbar } from './Snackbar';
+export { default as Alert } from './Alert';
 //types
 // export type { TypographyProps } from './Text';
