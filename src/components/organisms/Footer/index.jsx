@@ -8,6 +8,7 @@ import {
   SubFlexContainer2,
   SubFlexContainer3,
   SubFlexContainer4,
+  AboveMainContainer,
 } from './index.styles';
 import PropTypes from 'prop-types';
 
@@ -21,7 +22,7 @@ const Footer = ({
   scrollContact,
 }) => {
   return (
-    <>
+    <AboveMainContainer>
       <MainContainer>
         <SubFlexContainer1>
           <img src={Logo} alt="Logo" style={{ width: 100, height: 100 }} />
@@ -30,7 +31,6 @@ const Footer = ({
             style={{
               color: 'white',
               alignSelf: 'center',
-              marginLeft: '30px',
               marginTop: '10px',
             }}
           >
@@ -66,8 +66,8 @@ const Footer = ({
             variant="h5"
             style={{
               color: 'white',
-              alignSelf: 'center',
               marginBottom: '10px',
+              alignSelf: 'flex-start',
             }}
           >
             Connect with Us
@@ -94,20 +94,20 @@ const Footer = ({
           </div>
         </SubFlexContainer4>
       </MainContainer>
-      <div style={{ marginLeft: '150px' }}>
+      <div style={{ display: 'flex', width: '80%' }}>
         <Text
           variant="subtitle2"
           style={{
             color: 'white',
-            alignSelf: 'center',
-            marginLeft: '10px',
             fontSize: 'small',
+            alignSelf: 'center',
+            justifySelf: 'flex-start',
           }}
         >
           © 2024 Influenze. All rights reserved.
         </Text>
       </div>
-    </>
+    </AboveMainContainer>
   );
 };
 export default Footer;

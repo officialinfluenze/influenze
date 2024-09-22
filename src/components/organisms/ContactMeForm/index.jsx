@@ -215,6 +215,7 @@ const ContactMeForm = ({ passedRef }) => {
               alignSelf: 'center',
               fontWeight: 600,
               margin: '2%',
+              textAlign: 'center',
             }}
           >
             Contact Us
@@ -231,7 +232,6 @@ const ContactMeForm = ({ passedRef }) => {
             style={{
               color: '#dddddd',
               width: '80%',
-              textAlign: 'center',
               margin: '2%',
               fontFamily: 'poppins, sans-serif',
             }}

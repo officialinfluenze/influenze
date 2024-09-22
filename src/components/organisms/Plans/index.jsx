@@ -79,7 +79,7 @@ const Tier3 = [
   },
 ];
 
-const Plans = ({ contactRef }) => {
+const Plans = ({ contactRef, passedRef }) => {
   const tierCardRef = useRef(null);
 
   const handleScrollToContact = () => {
@@ -111,7 +111,7 @@ const Plans = ({ contactRef }) => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }} ref={passedRef}>
       <Heading1 variant="h2">Affordable Plans:</Heading1>
       <Heading2 variant="h2">
         Choose the perfect plan tailored for your business needs
@@ -172,6 +172,10 @@ Plans.propTypes = {
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   ]).isRequired,
+  passedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 };
 
 export default Plans;
