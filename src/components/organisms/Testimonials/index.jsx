@@ -1,4 +1,4 @@
-import pic from '../../../assets/images/logo-png.png';
+import pic from '../../../assets/images/final_logo.png';
 import TestimonialCard from 'src/components/molecules/TestimonialCards';
 import { Heading, MainContainer, SubContainer } from './index.styles';
 

@@ -40,7 +40,7 @@ export const SubTopContainer = styled('div')({
 
 export const ImageContainer = styled('div')({
   display: 'flex',
-  width: '80%',
+  width: '60%',
   '@media (max-width: 750px)': {
     width: '100%',
     height: 'auto',

@@ -1,5 +1,5 @@
 import { Button, Text, Icons } from '@influenze/ui-lib';
-import Logo from '../../../assets/images/logo-png.png';
+import Logo from '../../../assets/images/logotransparent.png';
 import {
   MainContainer,
   NavLinks,
@@ -25,7 +25,7 @@ const Footer = ({
       <MainContainer>
         <SubFlexContainer1>
           <img src={Logo} alt="Logo" style={{ width: 100, height: 100 }} />
-          <Text
+          {/* <Text
             variant="h6"
             style={{
               color: 'white',
@@ -35,7 +35,7 @@ const Footer = ({
             }}
           >
             Influenze
-          </Text>
+          </Text> */}
         </SubFlexContainer1>
         <SubFlexContainer2>
           <Text variant="h5" style={{ color: 'white', marginBottom: '10px' }}>
@@ -75,11 +75,11 @@ const Footer = ({
           <div style={{ display: 'flex' }}>
             <Button
               sx={{ color: 'white', minWidth: '10px' }}
-              onClick={() => {
-                window.open(
-                  'https://www.instagram.com/influenze.in?igsh=em56cXFodnUwa290',
-                );
-              }}
+              // onClick={() => {
+              //   window.open(
+              //     'https://www.instagram.com/influenze.in?igsh=em56cXFodnUwa290',
+              //   );
+              // }}
             >
               <InstagramIcon />
             </Button>

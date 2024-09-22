@@ -93,7 +93,7 @@ const ContactMeForm = ({ passedRef }) => {
           >
             <StyledTextField
               name="entry.2005620554"
-              label="name"
+              label="Name"
               value={name}
               onChange={(event) => {
                 setName(event.target.value);
@@ -103,7 +103,7 @@ const ContactMeForm = ({ passedRef }) => {
             <StyledTextField
               name="entry.1166974658"
               value={phone}
-              label="phone number"
+              label="Phone number"
               onChange={(event) => {
                 setPhone(event.target.value);
               }}
@@ -112,7 +112,7 @@ const ContactMeForm = ({ passedRef }) => {
           </div>
           <StyledTextField
             name="entry.1045781291"
-            label="email"
+            label="Email"
             value={email}
             type="email"
             onChange={(event) => {
@@ -122,7 +122,7 @@ const ContactMeForm = ({ passedRef }) => {
           />
           <StyledTextField
             name="entry.839337160"
-            label="message"
+            label="Message"
             value={message}
             multiline
             onChange={(event) => {

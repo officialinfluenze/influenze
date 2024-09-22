@@ -8,7 +8,7 @@ const FAQ = () => {
       <Heading2 variant="h5">Commonly asked questions</Heading2>
       <FAQAccordionItem
         title="What services do you offer?"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+        content="We offer a wide range of services which includes organic content production, web site development, SEO, PPC and many other services. Get in touch with us to learn more."
       />
       <FAQAccordionItem
         title="How do I get started?"

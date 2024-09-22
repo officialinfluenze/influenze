@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Button, Text } from '@influenze/ui-lib';
-import Logo from '../../../assets/images/logo-png.png';
+import { AppBar, Toolbar, Button } from '@influenze/ui-lib';
+import Logo from '../../../assets/images/logotransparent.png';
 import { NavLinks } from './index.styles';
 import PropTypes from 'prop-types';
 const Header = ({
@@ -22,15 +22,8 @@ const Header = ({
         <img
           src={Logo}
           alt="Logo"
-          style={{ width: 50, height: 50, marginRight: 10 }}
+          style={{ width: 80, height: 80, marginRight: 10 }}
         />
-        <Text
-          variant="h6"
-          style={{ fontFamily: 'Arial, sans-serif' }}
-          sx={{ fontWeight: '550', color: 'white' }}
-        >
-          Influenze
-        </Text>
         <NavLinks>
           <Button
             sx={{
