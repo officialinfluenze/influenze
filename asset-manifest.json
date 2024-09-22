@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/influenze/static/css/main.bc63da74.css",
-    "main.js": "/influenze/static/js/main.bd661e2c.js",
+    "main.js": "/influenze/static/js/main.c56a2454.js",
     "static/media/headerimg.png": "/influenze/static/media/headerimg.f4f5db6332582989f7f1.png",
-    "static/media/final_logo.png": "/influenze/static/media/final_logo.96cdf059aa27a1f0560e.png",
     "static/media/logotransparent.png": "/influenze/static/media/logotransparent.e7f643ef9f9deb804676.png",
     "static/media/Branding and Marketing.svg": "/influenze/static/media/Branding and Marketing.d7c575f0c2c2485a36e075f6108b96ba.svg",
     "static/media/Digital Strategies.svg": "/influenze/static/media/Digital Strategies.ea637c8b4e2beea62ff713cfeb52ea60.svg",
@@ -13,10 +12,10 @@
     "static/media/Content Creation.svg": "/influenze/static/media/Content Creation.e6ba9733b8441d59358f3bc351e095dc.svg",
     "index.html": "/influenze/index.html",
     "main.bc63da74.css.map": "/influenze/static/css/main.bc63da74.css.map",
-    "main.bd661e2c.js.map": "/influenze/static/js/main.bd661e2c.js.map"
+    "main.c56a2454.js.map": "/influenze/static/js/main.c56a2454.js.map"
   },
   "entrypoints": [
     "static/css/main.bc63da74.css",
-    "static/js/main.bd661e2c.js"
+    "static/js/main.c56a2454.js"
   ]
 }
