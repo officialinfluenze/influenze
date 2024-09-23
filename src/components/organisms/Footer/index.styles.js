@@ -101,13 +101,12 @@ export const LogoText = styled(Text)(({theme})=>({
 }));
 
 
-
 export const FooterContainer = styled('div')(({ theme }) => ({
   margin: '0 auto',
   marginLeft: '15%',
   padding: theme.spacing(2, 0),
-  [theme.breakpoints.down('md')]: {
-    marginLeft: '37%',
+  [theme.breakpoints.down('lg')]: {
+    marginLeft: '2%',
   },
 }));
 
