@@ -51,7 +51,11 @@ const TierPlanCard = ({
           {monthlyCost}
         </span>
       </SubFlexContainer>
-      <Text style={{ color: 'white' }}>{description}</Text>
+      <Text
+        style={{ color: 'white', fontSize: '22px', fontFamily: 'sans-serif' }}
+      >
+        {description}
+      </Text>
       <StyledHr />
       <div>
         {benefits.map((benefit, index) => (

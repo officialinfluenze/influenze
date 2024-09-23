@@ -59,7 +59,7 @@ const Tier2 = [
 const Tier3 = [
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
-    description: 'Everything in Growth plan',
+    description: 'Everything in Silver plan',
   },
   {
     icon: <CheckCircleOutlineIcon sx={{ fontSize: '20px' }} />,
@@ -128,9 +128,9 @@ const Plans = ({ contactRef, passedRef }) => {
       >
         <FlexContainer ref={tierCardRef}>
           <TierPlanCard
-            planTitle="Starter"
-            price="₹9,999"
-            monthlyCost="/month"
+            planTitle="Bronze"
+            // price="₹9,999"
+            // monthlyCost="/month"
             description="Ideal for personal use or small businesses"
             benefits={Tier1}
             buttonText="Get Started"
@@ -138,9 +138,9 @@ const Plans = ({ contactRef, passedRef }) => {
             scrollToContact={handleScrollToContact}
           />
           <TierPlanCard
-            planTitle="Growth"
-            price="₹39,999"
-            monthlyCost="/month"
+            planTitle="Silver"
+            // price="₹39,999"
+            // monthlyCost="/month"
             description="Ideal for small teams and businesses"
             benefits={Tier2}
             buttonText="Get Started"
@@ -148,9 +148,9 @@ const Plans = ({ contactRef, passedRef }) => {
             scrollToContact={handleScrollToContact}
           />
           <TierPlanCard
-            planTitle="Expert"
-            price="₹69,999"
-            monthlyCost="/month"
+            planTitle="Gold"
+            // price="₹69,999"
+            // monthlyCost="/month"
             description="Ideal for large businesses or organizations"
             benefits={Tier3}
             buttonText="Get Started"
