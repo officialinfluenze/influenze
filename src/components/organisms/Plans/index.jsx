@@ -112,10 +112,12 @@ const Plans = ({ contactRef, passedRef }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }} ref={passedRef}>
-      <Heading1 variant="h2">Affordable Plans:</Heading1>
-      <Heading2 variant="h2">
-        Choose the perfect plan tailored for your business needs
-      </Heading2>
+      <div style={{ margin: '2%' }}>
+        <Heading1 variant="h2">Affordable Plans:</Heading1>
+        <Heading2 variant="h2">
+          Choose the perfect plan tailored for your business needs
+        </Heading2>
+      </div>
       <div
         style={{
           backgroundImage: `radial-gradient(at 61% 26%, hsla(168,0%,0%,1) 0px, transparent 50%),

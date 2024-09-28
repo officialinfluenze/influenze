@@ -156,7 +156,7 @@ const Page = ({ passedRef }) => {
 
   return (
     <div ref={passedRef} style={{ display: 'flex', flexDirection: 'column' }}>
-      <Heading1 variant="body1">Boost Your Brand</Heading1>
+      <Heading1 variant="body1">Boost Your Brand:</Heading1>
       <Heading2 variant="h5" color="#dddddd">
         Innovative Social Media Marketing Solutions
       </Heading2>

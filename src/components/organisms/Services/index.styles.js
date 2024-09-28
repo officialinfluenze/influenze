@@ -59,7 +59,10 @@ export const Heading1 = styled(Text)({
     marginTop: '100px',
     fontWeight: 'bold', 
     letterSpacing: '-1.5px',
-    lineHeight: '110%'
+    lineHeight: '110%',
+    '@media (max-width: 768px)': {
+        fontSize: '42px', // Smaller size for mobile
+    },
 });
 
 export const Heading2 = styled(Text)({
@@ -74,6 +77,9 @@ export const Heading2 = styled(Text)({
     letterSpacing: '-1.5px', 
     maxWidth:'80%',
     margin:'auto',
+    '@media (max-width: 768px)': {
+        fontSize: '42px', // Smaller size for mobile
+    },
 });
 
 export const FlexContainer = styled('div')({

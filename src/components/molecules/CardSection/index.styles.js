@@ -70,7 +70,10 @@ export const Heading = styled(Text)({
   fontWeight: 'bold', 
   letterSpacing: '-1.5px',
   lineHeight: '110%',
-  margin:'6px'
+  margin:'6px',
+  '@media (max-width: 768px)': {
+    fontSize: '42px',
+  },
 });
 
 export const SubHeading = styled(Text)({
