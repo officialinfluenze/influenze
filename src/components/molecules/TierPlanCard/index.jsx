@@ -73,8 +73,8 @@ const TierPlanCard = ({
 
 TierPlanCard.propTypes = {
   planTitle: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  monthlyCost: PropTypes.string.isRequired,
+  price: PropTypes.string,
+  monthlyCost: PropTypes.string,
   description: PropTypes.string.isRequired,
   benefits: PropTypes.arrayOf(
     PropTypes.shape({

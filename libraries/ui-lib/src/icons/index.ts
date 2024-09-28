@@ -7,3 +7,4 @@ export { default as CheckCircleOutlineIcon } from './CheckCircleOutlineIcon';
 export { default as InstagramIcon } from './InstagramIcon';
 export { default as EmailIcon } from './EmailIcon';
 export { default as ArrowDropDown } from './ArrowDropDown';
+export { default as MenuIcon } from './MenuIcon';

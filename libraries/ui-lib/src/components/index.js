@@ -19,5 +19,6 @@ export { default as Tooltip } from './Tooltip';
 export { default as CircularProgress } from './CircularProgress';
 export { default as Snackbar } from './Snackbar';
 export { default as Alert } from './Alert';
+export { default as Drawer } from './Drawer';
 //types
 // export type { TypographyProps } from './Text';
