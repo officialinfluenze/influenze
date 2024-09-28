@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/influenze.com/static/css/main.bc63da74.css",
-    "main.js": "/influenze.com/static/js/main.8c23821a.js",
-    "static/media/headerimg.png": "/influenze.com/static/media/headerimg.f4f5db6332582989f7f1.png",
-    "static/media/logotransparent.png": "/influenze.com/static/media/logotransparent.e7f643ef9f9deb804676.png",
-    "static/media/Branding and Marketing.svg": "/influenze.com/static/media/Branding and Marketing.d7c575f0c2c2485a36e075f6108b96ba.svg",
-    "static/media/Digital Strategies.svg": "/influenze.com/static/media/Digital Strategies.ea637c8b4e2beea62ff713cfeb52ea60.svg",
-    "static/media/Analytics & SEO.svg": "/influenze.com/static/media/Analytics & SEO.4207a25b24783fdc00ad62159237e309.svg",
-    "static/media/Pay-Per-Click.svg": "/influenze.com/static/media/Pay-Per-Click.3d1bc563119815c0dcbfa2b05ea219e3.svg",
-    "static/media/Web Development.svg": "/influenze.com/static/media/Web Development.69af998ad9d275e7da9f30f29b663d12.svg",
-    "static/media/Content Creation.svg": "/influenze.com/static/media/Content Creation.e6ba9733b8441d59358f3bc351e095dc.svg",
-    "index.html": "/influenze.com/index.html",
-    "main.bc63da74.css.map": "/influenze.com/static/css/main.bc63da74.css.map",
-    "main.8c23821a.js.map": "/influenze.com/static/js/main.8c23821a.js.map"
+    "main.css": "/static/css/main.bc63da74.css",
+    "main.js": "/static/js/main.1baf7638.js",
+    "static/media/headerimg.png": "/static/media/headerimg.f4f5db6332582989f7f1.png",
+    "static/media/logotransparent.png": "/static/media/logotransparent.e7f643ef9f9deb804676.png",
+    "static/media/Branding and Marketing.svg": "/static/media/Branding and Marketing.d7c575f0c2c2485a36e075f6108b96ba.svg",
+    "static/media/Digital Strategies.svg": "/static/media/Digital Strategies.ea637c8b4e2beea62ff713cfeb52ea60.svg",
+    "static/media/Analytics & SEO.svg": "/static/media/Analytics & SEO.4207a25b24783fdc00ad62159237e309.svg",
+    "static/media/Pay-Per-Click.svg": "/static/media/Pay-Per-Click.3d1bc563119815c0dcbfa2b05ea219e3.svg",
+    "static/media/Web Development.svg": "/static/media/Web Development.69af998ad9d275e7da9f30f29b663d12.svg",
+    "static/media/Content Creation.svg": "/static/media/Content Creation.e6ba9733b8441d59358f3bc351e095dc.svg",
+    "index.html": "/index.html",
+    "main.bc63da74.css.map": "/static/css/main.bc63da74.css.map",
+    "main.1baf7638.js.map": "/static/js/main.1baf7638.js.map"
   },
   "entrypoints": [
     "static/css/main.bc63da74.css",
-    "static/js/main.8c23821a.js"
+    "static/js/main.1baf7638.js"
   ]
 }
