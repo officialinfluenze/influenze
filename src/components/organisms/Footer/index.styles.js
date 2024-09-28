@@ -24,8 +24,10 @@ export const MainContainer = styled('div')({
   display: 'flex',
   width: '80%',
   justifyContent: 'space-between',
-  gap: '20px',
+  gap: '2%',
   marginBottom: '10px',
+  flexWrap: 'wrap',
+  overflow: 'hidden',
 });
 
 export const SubFlexContainer1 = styled('div')({

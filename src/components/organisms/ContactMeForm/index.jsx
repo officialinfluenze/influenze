@@ -100,7 +100,6 @@ const ContactMeForm = ({ passedRef }) => {
             display: 'flex',
             flexDirection: 'column',
             width: '100%',
-            minWidth: '500px',
           }}
         >
           <Text
@@ -110,6 +109,7 @@ const ContactMeForm = ({ passedRef }) => {
               alignSelf: 'center',
               fontWeight: 600,
               margin: '1%',
+              textAlign: 'center',
             }}
           >
             Just say Hello!
@@ -220,6 +220,7 @@ const ContactMeForm = ({ passedRef }) => {
             justifyContent: 'center',
             backgroundColor: 'transparent',
             minHeight: 'auto',
+            flex: 1,
           }}
         >
           {loading ? (
@@ -228,7 +229,7 @@ const ContactMeForm = ({ passedRef }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 width: '100%',
-                minWidth: '500px',
+                minWidth: '200px',
               }}
             >
               <CircularProgress size={50} style={{ alignSelf: 'center' }} />
@@ -242,6 +243,7 @@ const ContactMeForm = ({ passedRef }) => {
         style={{
           display: 'flex',
           flexDirection: 'column',
+          flex: 1,
         }}
       >
         <div
@@ -276,6 +278,7 @@ const ContactMeForm = ({ passedRef }) => {
               color: '#dddddd',
               width: '80%',
               margin: '2%',
+              textAlign: 'center',
               fontFamily: 'poppins, sans-serif',
             }}
           >
