@@ -17,7 +17,10 @@ export const Heading2 = styled(Text)({
     color:'#dddddd',
     marginTop: '1%',
     letterSpacing: '-1.5px',
-    lineHeight: '110%'
+    lineHeight: '110%',
+    '@media (max-width: 768px)': {
+        fontSize: '42px', // Smaller size for mobile
+    },
 });
 
 export const AccordianContainer = styled('div')({

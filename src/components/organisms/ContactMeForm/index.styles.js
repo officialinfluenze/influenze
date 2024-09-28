@@ -48,6 +48,7 @@ export const FlexContainer = styled('div')({
     flexDirection: 'column-reverse',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: '150px',
   },
 
   '@keyframes AnimationName': {
