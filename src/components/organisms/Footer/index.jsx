@@ -44,7 +44,7 @@ const Footer = ({
           <Text
             style={{ color: 'white', alignSelf: 'center', textWrap: 'pretty' }}
           >
-            Influenze is a leading digital marketing agency dedicated to helping
+            Influenze is a digital marketing agency dedicated to helping
             businesses grow and thrive online with innovative strategies.
             Elevate your brand with Influenze today!
           </Text>
